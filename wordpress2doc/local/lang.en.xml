@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="en" language-long="English" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://en.code-bude.net" lastedit-ts="635134087787188983" lastedit="Donnerstag, 29. August 2013 21:32:58" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">Doubleclick on a row to preview the blog post</ressource>
+    <ressource label="C_lblConvertStatus"> articles overall / </ressource>
+    <ressource label="C_lblConvertStatus2"> checked for export</ressource>
+    <ressource label="C_hwLoadExportFile">Please switch to the "Load export" tab and
+open a Wordpress export file before using this tab.</ressource>
+    <ressource label="C_lblArticleCountZero">No articles</ressource>
+    <ressource label="C_dlgNoArticles">Export file is empty. No articles found.</ressource>
+    <ressource label="V_ofdFilter">Xml Files</ressource>
+    <ressource label="V_ofdFilter2">All Files</ressource>
+    <ressource label="C_dlgInvalidExportFile">Please choose a valid Wordpress export file. The file you have chosen isn't well formed.</ressource>
+    <ressource label="C_dlgNoArticleChosen">Please select at least one blog post which should be converted!</ressource>
+    <ressource label="C_fbdDescription">Choose the export folder</ressource>
+    <ressource label="C_lblConvertStatusReady">Sir, I'm done!</ressource>
+    <ressource label="C_lblConvertStatusProgress">Converting article</ressource>
+    <ressource label="C_lblConvertStatusProgress2">of</ressource>
+    <ressource label="C_dlgErrorInExport">There was an error! :(</ressource>
+    <ressource label="C_tpLoad">Load export</ressource>
+    <ressource label="C_lblStartDescription">Click here to open a Wordpress
+export XML-file and start the
+conversion process.</ressource>
+    <ressource label="C_mtHelp">Help</ressource>
+    <ressource label="C_mtSettings">Settings &amp;&amp; Info</ressource>
+    <ressource label="C_mtLoadEportFile">Load Wordpress export.xml</ressource>
+    <ressource label="C_tpChoose">Choose articles</ressource>
+    <ressource label="C_btnChooseTip">Help</ressource>
+    <ressource label="C_btnDeselectAll">Deselect all</ressource>
+    <ressource label="C_btnSelectAll">Select all</ressource>
+    <ressource label="C_tpPreviewWeb">html preview</ressource>
+    <ressource label="C_tpPreviewText">text preview</ressource>
+    <ressource label="C_clmnExport">Convert</ressource>
+    <ressource label="C_clmnTitle">Title</ressource>
+    <ressource label="C_tpExport">Convert and export</ressource>
+    <ressource label="C_lblConvertFormat">Export as:</ressource>
+    <ressource label="C_mtConvertStart">Convert choosen articles</ressource>
+    <ressource label="C_tpSettings">Settings</ressource>
+    <ressource label="C_lblSettingsStyle">Theme &amp;&amp; Style</ressource>
+    <ressource label="C_lblSettingsLanguage">Language</ressource>
+    <ressource label="C_btnSettingsClose">Close Settings</ressource>
+    <ressource label="C_lblSettingsCredits">Info &amp;&amp; Credits</ressource>
+    <ressource label="C_lblUseProxy">Use Proxy</ressource>
+    <ressource label="C_lblProxyServer">Server:</ressource>
+    <ressource label="C_lblProxyPort">Port:</ressource>
+    <ressource label="C_lblSettingsTranslated">translated by:</ressource>
+    <ressource label="C_dlgErrorHelp">The help file couldn't be opened. There happened an error:
+</ressource>
+  </ressources>
+</translation>

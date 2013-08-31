@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="de" language-long="German" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://code-bude.net" lastedit-ts="635134088221203437" lastedit="Donnerstag, 29. August 2013 21:33:42" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">Doppelklicken Sie auf eine Zeile, um eine Vorschau des Artikel angezeigt zu bekommen</ressource>
+    <ressource label="C_lblConvertStatus"> Artikel insgesamt / </ressource>
+    <ressource label="C_lblConvertStatus2"> zu konvertieren</ressource>
+    <ressource label="C_hwLoadExportFile">Bitte zum "Exportdatei laden" Tab wechseln
+und eine Wordpress-Export-Datei öffnen, 
+bevor auf diesem Tab weitergearbeitet werden kann.</ressource>
+    <ressource label="C_lblArticleCountZero">Keine Artikel</ressource>
+    <ressource label="C_dlgNoArticles">Die Exportdatei ist leer. Es wurden keine Artikel gefunden.</ressource>
+    <ressource label="V_ofdFilter">Xml-Dateien</ressource>
+    <ressource label="V_ofdFilter2">Alle Dateien</ressource>
+    <ressource label="C_dlgInvalidExportFile">Bitte wählen Sie eine valide Wordpress-Export-Datei. Die gewählte Datei entspricht nicht dem erwarteten Dateiformat.</ressource>
+    <ressource label="C_dlgNoArticleChosen">Bitte wählen Sie mindestens einen Blogpost aus, der umgewandelt werden soll!</ressource>
+    <ressource label="C_fbdDescription">Wählen Sie das Ausgabeverzeichnis</ressource>
+    <ressource label="C_lblConvertStatusReady">Alle Dateien erfolgreich umgewandelt!</ressource>
+    <ressource label="C_lblConvertStatusProgress">Konvertiere Artikel</ressource>
+    <ressource label="C_lblConvertStatusProgress2">von</ressource>
+    <ressource label="C_dlgErrorInExport">Leider kam es zu einem Fehler! :(</ressource>
+    <ressource label="C_tpLoad">Exportdatei öffnen</ressource>
+    <ressource label="C_lblStartDescription">Klicken Sie hier, um eine Wordpress
+Exportdatei zu öffnen und mit dem
+Umwandlungsprozess zu beginnen.</ressource>
+    <ressource label="C_mtHelp">Hilfe</ressource>
+    <ressource label="C_mtSettings">Einstellungen</ressource>
+    <ressource label="C_mtLoadEportFile">Lade Wordpress export.xml</ressource>
+    <ressource label="C_tpChoose">Artikel wählen</ressource>
+    <ressource label="C_btnChooseTip">Hilfe</ressource>
+    <ressource label="C_btnDeselectAll">Alle [  ]</ressource>
+    <ressource label="C_btnSelectAll">Alle [x]</ressource>
+    <ressource label="C_tpPreviewWeb">html vorschau</ressource>
+    <ressource label="C_tpPreviewText">text vorschau</ressource>
+    <ressource label="C_clmnExport">Umwandeln</ressource>
+    <ressource label="C_clmnTitle">Überschrift/Titel</ressource>
+    <ressource label="C_tpExport">Konvertieren</ressource>
+    <ressource label="C_lblConvertFormat">Konvertiere zu:</ressource>
+    <ressource label="C_mtConvertStart">Konvertiere Artikel jetzt!</ressource>
+    <ressource label="C_tpSettings">Einstellungen</ressource>
+    <ressource label="C_lblSettingsStyle">Theme &amp;&amp; Style</ressource>
+    <ressource label="C_lblSettingsLanguage">Sprache</ressource>
+    <ressource label="C_btnSettingsClose">zurück</ressource>
+    <ressource label="C_lblSettingsCredits">Info &amp;&amp; Credits</ressource>
+    <ressource label="C_lblUseProxy">Proxy benutzen</ressource>
+    <ressource label="C_lblProxyServer">Server:</ressource>
+    <ressource label="C_lblProxyPort">Port:</ressource>
+    <ressource label="C_lblSettingsTranslated">übersetzt von:</ressource>
+    <ressource label="C_dlgErrorHelp">Die Hilfedatei konnte nicht geladen werden. Es trat folgender Fehler auf:
+</ressource>
+  </ressources>
+</translation>
