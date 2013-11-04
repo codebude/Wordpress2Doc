@@ -126,15 +126,15 @@
             // metroTabControlContainer
             // 
             this.metroTabControlContainer.Controls.Add(this.metroTabPageLoad);
-            this.metroTabControlContainer.Controls.Add(this.metroTabPageChoose);
             this.metroTabControlContainer.Controls.Add(this.metroTabPageExport);
+            this.metroTabControlContainer.Controls.Add(this.metroTabPageChoose);
             this.metroTabControlContainer.Controls.Add(this.metroTabPageSettings);
             this.metroTabControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlContainer.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
             this.metroTabControlContainer.HotTrack = true;
             this.metroTabControlContainer.Location = new System.Drawing.Point(20, 60);
             this.metroTabControlContainer.Name = "metroTabControlContainer";
-            this.metroTabControlContainer.SelectedIndex = 2;
+            this.metroTabControlContainer.SelectedIndex = 1;
             this.metroTabControlContainer.Size = new System.Drawing.Size(760, 400);
             this.metroTabControlContainer.TabIndex = 1;
             // 
@@ -264,7 +264,7 @@
             this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewText);
             this.metroTabControlPreview.Location = new System.Drawing.Point(311, 11);
             this.metroTabControlPreview.Name = "metroTabControlPreview";
-            this.metroTabControlPreview.SelectedIndex = 1;
+            this.metroTabControlPreview.SelectedIndex = 0;
             this.metroTabControlPreview.Size = new System.Drawing.Size(442, 347);
             this.metroTabControlPreview.TabIndex = 1;
             // 
@@ -286,7 +286,7 @@
             this.metroLabelPreviewTitleHtml.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
             this.metroLabelPreviewTitleHtml.Location = new System.Drawing.Point(3, 4);
             this.metroLabelPreviewTitleHtml.Name = "metroLabelPreviewTitleHtml";
-            this.metroLabelPreviewTitleHtml.Size = new System.Drawing.Size(103, 25);
+            this.metroLabelPreviewTitleHtml.Size = new System.Drawing.Size(106, 25);
             this.metroLabelPreviewTitleHtml.TabIndex = 2;
             this.metroLabelPreviewTitleHtml.Text = "metroLabel1";
             this.metroLabelPreviewTitleHtml.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -309,7 +309,7 @@
             this.metroLabelPreviewTitleText.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
             this.metroLabelPreviewTitleText.Location = new System.Drawing.Point(3, 4);
             this.metroLabelPreviewTitleText.Name = "metroLabelPreviewTitleText";
-            this.metroLabelPreviewTitleText.Size = new System.Drawing.Size(103, 25);
+            this.metroLabelPreviewTitleText.Size = new System.Drawing.Size(106, 25);
             this.metroLabelPreviewTitleText.TabIndex = 3;
             this.metroLabelPreviewTitleText.Text = "metroLabel1";
             this.metroLabelPreviewTitleText.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -320,7 +320,7 @@
             this.metroLabelCount.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
             this.metroLabelCount.Location = new System.Drawing.Point(3, 337);
             this.metroLabelCount.Name = "metroLabelCount";
-            this.metroLabelCount.Size = new System.Drawing.Size(81, 19);
+            this.metroLabelCount.Size = new System.Drawing.Size(83, 19);
             this.metroLabelCount.TabIndex = 4;
             this.metroLabelCount.Text = "metroLabel1";
             // 
@@ -346,7 +346,7 @@
             this.dataGridViewArticles.RowHeadersVisible = false;
             this.dataGridViewArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewArticles.ShowEditingIcon = false;
-            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 294);
+            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 290);
             this.dataGridViewArticles.TabIndex = 2;
             this.dataGridViewArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArticles_CellClick);
             // 
@@ -544,7 +544,7 @@
             this.metroLabelSettingsProxyServer.AutoSize = true;
             this.metroLabelSettingsProxyServer.Location = new System.Drawing.Point(41, 275);
             this.metroLabelSettingsProxyServer.Name = "metroLabelSettingsProxyServer";
-            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(51, 19);
+            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(49, 19);
             this.metroLabelSettingsProxyServer.TabIndex = 12;
             this.metroLabelSettingsProxyServer.Text = "Server:";
             // 

@@ -27,7 +27,7 @@ namespace Wordpress2Doc
         private PrivateFontCollection fontColl;
         private Font handwrittenFont;
         private Localization loc;
-        private int version = 1;
+        private int version = 2;
 
         public Form1()
         {
@@ -109,7 +109,7 @@ namespace Wordpress2Doc
             metroLabelSettingsStyle.Text = loc.C_lblSettingsStyle;
             metroLabelSettingsLanguage.Text = loc.C_lblSettingsLanguage;
             metroButtonSettingsClose.Text = loc.C_btnSettingsClose;
-            metroLabelSettingsCredits.Text = loc.C_lblSettingsCredits;
+            metroLabelSettingsCredits.Text = loc.C_lblSettingsCredits + " (Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + ")";
             metroLabelSettingsProxyPort.Text = loc.C_lblProxyPort;
             metroLabelSettingsProxyServer.Text = loc.C_lblProxyServer;
             metroLabelSettingsUseProxy.Text = loc.C_lblUseProxy;
@@ -322,7 +322,7 @@ namespace Wordpress2Doc
         private static void SaveHtmlAsDocx(string fName, string htmlBody)
         {
             FileInfo fi = new FileInfo(fName);
-            var htmlByteContent = Encoding.UTF8.GetBytes(String.Concat("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"><html><head><title></title></head><body>", htmlBody, "</body></html>"));
+            var htmlByteContent = Encoding.UTF8.GetBytes(String.Concat("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title></title></head><body>", htmlBody, "</body></html>"));
 
             var namespaceDocx = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
             var namespaceRs = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
@@ -377,8 +377,7 @@ namespace Wordpress2Doc
                 .SetAllowLocalContent(true)
                 .SetPrintBackground(true);
             
-           //.SetProxyString("proxy.sutter-telefonbuchverlag.de:8080")
-            byte[] pdfBuf = sp.Convert(oc, "<html><body>" + html + "</body></html>");
+            byte[] pdfBuf = sp.Convert(oc, "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title></title></head><body>" + html + "</body></html>");
             FileStream fs = new FileStream(fName, FileMode.Create, FileAccess.ReadWrite);
             foreach (var byteSymbol in pdfBuf)
                 fs.WriteByte(byteSymbol);
