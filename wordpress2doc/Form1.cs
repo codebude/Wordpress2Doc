@@ -27,7 +27,7 @@ namespace Wordpress2Doc
         private PrivateFontCollection fontColl;
         private Font handwrittenFont;
         private Localization loc;
-        private int version = 2;
+        private int version = 3;
 
         public Form1()
         {
@@ -76,6 +76,12 @@ namespace Wordpress2Doc
             metroToggleFormatDocx.Checked = Convert.ToBoolean(SettingsHelper.GetAppSetting("formatDocx"));
             metroToggleFormatPdf.Checked = Convert.ToBoolean(SettingsHelper.GetAppSetting("formatPdf"));
 
+            if (SettingsHelper.GetAppSetting("AIO") == null)
+            {
+                SettingsHelper.SetAppSetting("AIO", "FALSE");
+            }
+            metroToggleConvertAIO.Checked = Convert.ToBoolean(SettingsHelper.GetAppSetting("AIO"));
+
             if (SettingsHelper.GetAppSetting("proxy-use") == null)
             {
                 SettingsHelper.SetAppSetting("proxy-use", "FALSE");
@@ -89,6 +95,12 @@ namespace Wordpress2Doc
 
         private void UpdateLanguage()
         {
+            /*
+            bool rtl = (loc.GetInfo.LanguageShort == "fa");
+            this.RightToLeft = (rtl ? System.Windows.Forms.RightToLeft.Yes : System.Windows.Forms.RightToLeft.No);
+            this.RightToLeftLayout = rtl;
+             */
+
             metroTabPageLoad.Text = loc.C_tpLoad;
             labelStartDescription.Text = loc.C_lblStartDescription;
             metroTileHelp.Text = loc.C_mtHelp;
@@ -104,6 +116,7 @@ namespace Wordpress2Doc
             ColumnTitle.HeaderText = loc.C_clmnTitle;
             metroTabPageExport.Text = loc.C_tpExport;
             metroLabelConvertFormat.Text = loc.C_lblConvertFormat;
+            metroLabelConvertAIO.Text = loc.C_lblConvertAIO;
             metroTileConvert.Text = loc.C_mtConvertStart;
             metroTabPageSettings.Text = loc.C_tpSettings;
             metroLabelSettingsStyle.Text = loc.C_lblSettingsStyle;
@@ -252,7 +265,7 @@ namespace Wordpress2Doc
                 try
                 {
                     if (Convert.ToInt32(ev.Result) > version)
-                        ShowMessage("There is an update available! Please visit http://en.code-bude.net");
+                        ShowMessage("There is an update available! Please visit http://code-bude.net/update/wordpress2doc");
                 }
                 catch { }
             };
@@ -261,6 +274,12 @@ namespace Wordpress2Doc
                 wc.DownloadStringAsync(new Uri("http://code-bude.net/downloads/wordpress2doc/update.txt"));
             }
             catch { }
+
+            metroTabControlContainer.TabPages.Clear();
+            metroTabControlContainer.TabPages.AddRange(new TabPage[] { metroTabPageLoad, metroTabPageChoose, metroTabPageExport });
+            webBrowserHtml.Size = new Size(428, 288);
+            richTextBoxPreview.Size = new Size(428, 288);
+            dataGridViewArticles.Size = new Size(306, 294);
         }
 
 
@@ -396,7 +415,8 @@ namespace Wordpress2Doc
             var regexSearch = new string(Path.GetInvalidFileNameChars());
             var regEx = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
             strSource = regEx.Replace(strSource, "");
-            return Regex.Replace(strSource, @"[^0-9a-zA-Z \-\.#]", "");
+            //return Regex.Replace(strSource, @"[^0-9a-zA-Z \-\.#]", "");
+            return strSource;
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -503,11 +523,16 @@ namespace Wordpress2Doc
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.ShowNewFolderButton = true;
             fbd.Description = loc.C_fbdDescription;
+            if (SettingsHelper.GetAppSetting("lastSavePath") != null && Directory.Exists(SettingsHelper.GetAppSetting("lastSavePath")))
+            {
+                fbd.SelectedPath = SettingsHelper.GetAppSetting("lastSavePath");
+            }
             if (fbd.ShowDialog() != System.Windows.Forms.DialogResult.OK)
                 return;
 
             metroToggleFormatDocx.Enabled = false;
             metroToggleFormatPdf.Enabled = false;
+            metroToggleConvertAIO.Enabled = false;
             metroTileConvert.Enabled = false;
            
             metroTabControlContainer.TabPages.Remove(metroTabPageLoad);
@@ -520,6 +545,7 @@ namespace Wordpress2Doc
 
             if (!Directory.Exists(fbd.SelectedPath))
                 Directory.CreateDirectory(fbd.SelectedPath);
+            SettingsHelper.SetAppSetting("lastSavePath", fbd.SelectedPath);
 
             var choosenArticles = dataGridViewArticles.Rows.Cast<DataGridViewRow>().Where(x => (bool)x.Cells[0].Value).Select(x => x.Tag.ToString()).ToList();
             var articles = xDoc.Root.Descendants("item").Where(x => choosenArticles.Contains(x.Descendants("link").First().Value)).ToList();
@@ -532,7 +558,7 @@ namespace Wordpress2Doc
             bgw.ProgressChanged += bgw_ProgressChanged;
             bgw.RunWorkerCompleted += bgw_RunWorkerCompleted;
             bgw.WorkerReportsProgress = true;
-            bgw.RunWorkerAsync(new object[]{articles, fbd.SelectedPath, metroToggleFormatDocx.Checked, metroToggleFormatPdf.Checked});
+            bgw.RunWorkerAsync(new object[]{articles, fbd.SelectedPath, metroToggleFormatDocx.Checked, metroToggleFormatPdf.Checked, metroToggleConvertAIO.Checked });
 
             
 
@@ -544,6 +570,7 @@ namespace Wordpress2Doc
             metroToggleFormatDocx.Enabled = true;
             metroToggleFormatPdf.Enabled = true;
             metroTileConvert.Enabled = true;
+            metroToggleConvertAIO.Enabled = true;
             metroProgressSpinner1.Visible = false;
             metroLabelConvertStatus.Text = loc.C_lblConvertStatusReady;
             metroTabControlContainer.TabPages.Clear();
@@ -561,21 +588,40 @@ namespace Wordpress2Doc
         {
             try
             {
+                string masterBody = string.Empty;
+
                 (((object[])e.Argument)[0] as List<XElement>).ForEach(item =>
                 {
                     var contentBody = item.Descendants(nsContent + "encoded").First().Value.Replace("\n", "<br />");
-                    var fNameBase = string.Concat((string)((object[])e.Argument)[1], "\\", CleanFileName(item.Descendants("title").First().Value));
-                    var fNameDocx = string.Concat(fNameBase, ".docx");
-                    var fNamePdf = string.Concat(fNameBase, ".pdf");
 
-                    if ((bool)((object[])e.Argument)[2])
-                        SaveHtmlAsDocx(fNameDocx, contentBody);
+                    if (!(bool)((object[])e.Argument)[4]) // != AllInOne
+                    {
+                        var fNameBase = string.Concat((string)((object[])e.Argument)[1], "\\", CleanFileName(item.Descendants("title").First().Value));
+                        var fNameDocx = string.Concat(fNameBase, ".docx");
+                        var fNamePdf = string.Concat(fNameBase, ".pdf");
 
-                    if ((bool)((object[])e.Argument)[3])
-                        SaveHtmlAsPdf(fNamePdf, contentBody);
+                        if ((bool)((object[])e.Argument)[2])
+                            SaveHtmlAsDocx(fNameDocx, contentBody);
+
+                        if ((bool)((object[])e.Argument)[3])
+                            SaveHtmlAsPdf(fNamePdf, contentBody);
+                    }
+                    else
+                    {
+                        masterBody += "<article><h1>" + item.Descendants("title").First().Value + "</h1><br/>" + contentBody + "</article><br/><br/><br/>";
+                    }
 
                     (sender as BackgroundWorker).ReportProgress(0);
                 });
+
+                if ((bool)((object[])e.Argument)[4]) // == AllInOne
+                {
+                    if ((bool)((object[])e.Argument)[2])
+                        SaveHtmlAsDocx(((object[])e.Argument)[1] + "\\wordpress2doc-export_"+DateTime.Now.ToFileTimeUtc().ToString() +".docx", masterBody);
+
+                    if ((bool)((object[])e.Argument)[3])
+                        SaveHtmlAsPdf(((object[])e.Argument)[1] + "\\wordpress2doc-export_"+DateTime.Now.ToFileTimeUtc().ToString() +".pdf", masterBody);
+                }
             }
             catch (Exception ee)
             {
@@ -599,7 +645,7 @@ namespace Wordpress2Doc
 
             if (!cbThis.Checked && !cbOther.Checked)
                 cbOther.Checked = true;
-
+            
             SettingsHelper.SetAppSetting("formatPdf", metroToggleFormatPdf.Checked.ToString());
             SettingsHelper.SetAppSetting("formatDocx", metroToggleFormatDocx.Checked.ToString());
         }
@@ -647,6 +693,11 @@ namespace Wordpress2Doc
                 }
                 catch { }
             }
+        }
+
+        private void metroToggleConvertAIO_CheckedChanged(object sender, EventArgs e)
+        {
+            SettingsHelper.SetAppSetting("AIO", metroToggleConvertAIO.Checked.ToString());
         }
         
     }

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="fa" language-long="Persian (Farsi) - فارسی" application="Wordpress2Doc" author="سجاد پناهی – Sajjad Panahi" author-link="http://www.AsreElm.com" lastedit-ts="635538316157702156" lastedit="Mittwoch, 10. Dezember 2014 18:06:55" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">بر روی یک ردیف دوبار کلیک کنید تا پیش نمایش مطلب نمایش داده شود.</ressource>
+    <ressource label="C_lblConvertStatus">مجموع مقاله</ressource>
+    <ressource label="C_lblConvertStatus2">عدد علامت گذاری شده برای برون بری</ressource>
+    <ressource label="C_hwLoadExportFile">لطفا قبل از استفاده از این بخش به لبه ی "بارگیری برون بری" رفته و یک فایل برای برون بری وردپرس انتخاب کنید.</ressource>
+    <ressource label="C_lblArticleCountZero">بدون مطلب (پست)</ressource>
+    <ressource label="C_dlgNoArticles">فایل برون بری خالی است. مطلبی پیدا نشد.</ressource>
+    <ressource label="V_ofdFilter">فایل های Xml</ressource>
+    <ressource label="V_ofdFilter2">تمام فایل ها</ressource>
+    <ressource label="C_dlgInvalidExportFile">لطفا یک فایل برون بری معتبر انتخاب نمایید. فایل انتخاب شده فرمت مناسبی ندارد.</ressource>
+    <ressource label="C_dlgNoArticleChosen">لطفا حداقل یک پست را برای تبدیل و برون بری انتخاب نمایید.</ressource>
+    <ressource label="C_fbdDescription">پوشه برون بری را انتخاب کنید.</ressource>
+    <ressource label="C_lblConvertStatusReady">انجام شد قربان! (تمام کارها به اتمام رسید.)</ressource>
+    <ressource label="C_lblConvertStatusProgress">در حال تبدیل مقاله </ressource>
+    <ressource label="C_lblConvertStatusProgress2">از</ressource>
+    <ressource label="C_dlgErrorInExport">خطایی رخ داده است! </ressource>
+    <ressource label="C_tpLoad">بارگیری برون بری</ressource>
+    <ressource label="C_lblStartDescription">برای بازشدن برون بری فایل Xml وردپرس و شروع فرآیند تبدیل اینجا کلیک کنید.</ressource>
+    <ressource label="C_mtHelp">راهنما</ressource>
+    <ressource label="C_mtSettings">تنظیمات و اطلاعات</ressource>
+    <ressource label="C_mtLoadEportFile">بارگیری export.xml وردپرس</ressource>
+    <ressource label="C_tpChoose">مطلب (ها) را انتخاب کنید (پست ها)</ressource>
+    <ressource label="C_btnChooseTip">راهنما</ressource>
+    <ressource label="C_btnDeselectAll">انتخاب نکردن همه</ressource>
+    <ressource label="C_btnSelectAll">انتخاب کردن همه</ressource>
+    <ressource label="C_tpPreviewWeb">پیش نمایش html</ressource>
+    <ressource label="C_tpPreviewText">پیش نمایش متنی</ressource>
+    <ressource label="C_clmnExport">تبدیل</ressource>
+    <ressource label="C_clmnTitle">عنوان</ressource>
+    <ressource label="C_tpExport">تبدیل و برون بری</ressource>
+    <ressource label="C_lblConvertFormat">برون بری به عنوان ...</ressource>
+    <ressource label="C_mtConvertStart">تبدیل مطلب (مطالب) انتخاب شده</ressource>
+    <ressource label="C_tpSettings">تنظیمات</ressource>
+    <ressource label="C_lblSettingsStyle">پوسته و سبک</ressource>
+    <ressource label="C_lblSettingsLanguage">زبان</ressource>
+    <ressource label="C_btnSettingsClose">بستن تنظیمات</ressource>
+    <ressource label="C_lblSettingsCredits">اطلاعات و امتیازات</ressource>
+    <ressource label="C_lblUseProxy">استفاده از پروکسی</ressource>
+    <ressource label="C_lblProxyServer">سرور</ressource>
+    <ressource label="C_lblProxyPort">پورت</ressource>
+    <ressource label="C_lblSettingsTranslated">ترجمه شده توسط:</ressource>
+    <ressource label="C_dlgErrorHelp">فایل راهنما نمی تواند باز شود. اتفاق افتاده است یک خطا وجود دارد:</ressource>
+    <ressource label="C_lblConvertAIO">همه مقالات در یک فایل:</ressource>
+  </ressources>
+</translation>

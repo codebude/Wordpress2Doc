@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="de" language-long="German" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://code-bude.net" lastedit-ts="635134088221203437" lastedit="Donnerstag, 29. August 2013 21:33:42" />
+  <info language="de" language-long="German" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://code-bude.net" lastedit-ts="635538321117416187" lastedit="Mittwoch, 10. Dezember 2014 18:15:11" />
   <ressources>
     <ressource label="C_ttPreviewTip">Doppelklicken Sie auf eine Zeile, um eine Vorschau des Artikel angezeigt zu bekommen</ressource>
     <ressource label="C_lblConvertStatus"> Artikel insgesamt / </ressource>
@@ -48,5 +48,6 @@ Umwandlungsprozess zu beginnen.</ressource>
     <ressource label="C_lblSettingsTranslated">übersetzt von:</ressource>
     <ressource label="C_dlgErrorHelp">Die Hilfedatei konnte nicht geladen werden. Es trat folgender Fehler auf:
 </ressource>
+    <ressource label="C_lblConvertAIO">Alle Artikel in einer Datei:</ressource>
   </ressources>
 </translation>

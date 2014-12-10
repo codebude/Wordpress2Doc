@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="en" language-long="English" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://en.code-bude.net" lastedit-ts="635134087787188983" lastedit="Donnerstag, 29. August 2013 21:32:58" />
+  <info language="en" language-long="English" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://en.code-bude.net" lastedit-ts="635538320910843439" lastedit="Mittwoch, 10. Dezember 2014 18:14:51" />
   <ressources>
     <ressource label="C_ttPreviewTip">Doubleclick on a row to preview the blog post</ressource>
     <ressource label="C_lblConvertStatus"> articles overall / </ressource>
@@ -47,5 +47,6 @@ conversion process.</ressource>
     <ressource label="C_lblSettingsTranslated">translated by:</ressource>
     <ressource label="C_dlgErrorHelp">The help file couldn't be opened. There happened an error:
 </ressource>
+    <ressource label="C_lblConvertAIO">All articles in one file:</ressource>
   </ressources>
 </translation>

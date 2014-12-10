@@ -154,6 +154,12 @@
     <Content Include="local\lang.en.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="local\lang.fa.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="local\lang.he.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="mingwm10.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

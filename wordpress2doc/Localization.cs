@@ -88,7 +88,9 @@ namespace Wordpress2Doc
                         }
                     }
                 }
-                catch { }               
+                catch (Exception fail) {
+                    var msg = fail.Message;
+                }               
             });
             return dict;
         }
@@ -139,6 +141,7 @@ namespace Wordpress2Doc
         public string C_lblProxyPort { get { return GetText("C_lblProxyPort"); } }
         public string C_lblSettingsTranslated { get { return GetText("C_lblSettingsTranslated"); } }
         public string C_dlgErrorHelp { get { return GetText("C_dlgErrorHelp"); } }
+        public string C_lblConvertAIO { get { return GetText("C_lblConvertAIO"); } }
 
         public struct TranslationInfo
         {

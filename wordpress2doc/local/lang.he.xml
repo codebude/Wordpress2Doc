@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="he" language-long="Hebrew" application="Wordpress2Doc" author="Yakov Itai Samelson" author-link="http://www.webmarketing4biz.com/" lastedit-ts="635538315920835555" lastedit="Mittwoch, 10. Dezember 2014 18:06:32" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">לחצו לחיצה כפולה על שורה על מנת לצפות בבלוג פוסט</ressource>
+    <ressource label="C_lblConvertStatus">מאמרים בסה"כ </ressource>
+    <ressource label="C_lblConvertStatus2">סומנו ליצוא</ressource>
+    <ressource label="C_hwLoadExportFile">אנא עבור ללשונית "טען יצוא" ופתח קובץ יצוא מוורדפרס לפני השימוש בלשונית זו</ressource>
+    <ressource label="C_lblArticleCountZero">אין מאמרים (בלוג פוסט)</ressource>
+    <ressource label="C_dlgNoArticles">קובץ היצוא ריק. לא נמצאו מאמרים.</ressource>
+    <ressource label="V_ofdFilter">קבצי XML</ressource>
+    <ressource label="V_ofdFilter2">כל הקבצים</ressource>
+    <ressource label="C_dlgInvalidExportFile">אנא בחר קובץ יצוא חוקי מוורדפרס. הקובץ שבחרת אינו בפורמט הנכון.</ressource>
+    <ressource label="C_dlgNoArticleChosen">אנא בחר לפחות בלוג פוסט אחד להמרה</ressource>
+    <ressource label="C_fbdDescription">בחר את הספרייה לייצוא</ressource>
+    <ressource label="C_lblConvertStatusReady">סיימתי! (כל העבודה בוצעה)</ressource>
+    <ressource label="C_lblConvertStatusProgress">ממיר מאמר </ressource>
+    <ressource label="C_lblConvertStatusProgress2">מתוך </ressource>
+    <ressource label="C_dlgErrorInExport">התרחשה שגיאה </ressource>
+    <ressource label="C_tpLoad">טען יצוא</ressource>
+    <ressource label="C_lblStartDescription">לחץ כאן על מנת לפתוח קובץ יצוא מוורדפרס בפורמט XML והתחל את תהליך ההמרה</ressource>
+    <ressource label="C_mtHelp">עזרה</ressource>
+    <ressource label="C_mtSettings">הגדרות ומידע</ressource>
+    <ressource label="C_mtLoadEportFile">טען קובץ יצוא מוורדפרס בפורמט XML</ressource>
+    <ressource label="C_tpChoose">בחר מאמר (בלוג פוסט)</ressource>
+    <ressource label="C_btnChooseTip">עזרה</ressource>
+    <ressource label="C_btnDeselectAll">בטל את כל הבחירה</ressource>
+    <ressource label="C_btnSelectAll">בחר הכל</ressource>
+    <ressource label="C_tpPreviewWeb">הצג בפורמט HTML</ressource>
+    <ressource label="C_tpPreviewText">הצג בפורמט טקסט</ressource>
+    <ressource label="C_clmnExport">המרה</ressource>
+    <ressource label="C_clmnTitle">כותרת</ressource>
+    <ressource label="C_tpExport">המרה ויצוא</ressource>
+    <ressource label="C_lblConvertFormat">יצא כ..</ressource>
+    <ressource label="C_mtConvertStart">בצע המרה של המאמרים הנבחרים</ressource>
+    <ressource label="C_tpSettings">הגדרות</ressource>
+    <ressource label="C_lblSettingsStyle">הגדרות עיצוב</ressource>
+    <ressource label="C_lblSettingsLanguage">שפה</ressource>
+    <ressource label="C_btnSettingsClose">סגור הגדרות</ressource>
+    <ressource label="C_lblSettingsCredits">מידע וקרדיטים</ressource>
+    <ressource label="C_lblUseProxy">השתמש בשרת פרוקסי</ressource>
+    <ressource label="C_lblProxyServer">שרת</ressource>
+    <ressource label="C_lblProxyPort">פורט</ressource>
+    <ressource label="C_lblSettingsTranslated">תורגם על ידי</ressource>
+    <ressource label="C_dlgErrorHelp">קובץ העזרה לא היה אפשרות לפתוח.שגיאה קרו</ressource>
+    <ressource label="C_lblConvertAIO">כל המאמרים בקובץ אחד:</ressource>
+  </ressources>
+</translation>

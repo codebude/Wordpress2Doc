@@ -39,6 +39,15 @@
             this.metroTileSettings = new MetroFramework.Controls.MetroTile();
             this.pictureBoxLoadArrow = new System.Windows.Forms.PictureBox();
             this.metroTileLoadExportXML = new MetroFramework.Controls.MetroTile();
+            this.metroTabPageExport = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabelConvertFormat = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelConvertFormatPdf = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelConvertFormatDocx = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.metroToggleFormatDocx = new MetroFramework.Controls.MetroToggle();
+            this.metroToggleFormatPdf = new MetroFramework.Controls.MetroToggle();
+            this.metroLabelConvertStatus = new MetroFramework.Controls.MetroLabel();
+            this.metroTileConvert = new MetroFramework.Controls.MetroTile();
             this.metroTabPageChoose = new MetroFramework.Controls.MetroTabPage();
             this.metroButtonChooseTip = new MetroFramework.Controls.MetroButton();
             this.metroButtonChooseDeselectAll = new MetroFramework.Controls.MetroButton();
@@ -52,15 +61,6 @@
             this.dataGridViewArticles = new System.Windows.Forms.DataGridView();
             this.ColumnExport = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTabPageExport = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabelConvertFormat = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelConvertFormatPdf = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelConvertFormatDocx = new MetroFramework.Controls.MetroLabel();
-            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.metroToggleFormatDocx = new MetroFramework.Controls.MetroToggle();
-            this.metroToggleFormatPdf = new MetroFramework.Controls.MetroToggle();
-            this.metroLabelConvertStatus = new MetroFramework.Controls.MetroLabel();
-            this.metroTileConvert = new MetroFramework.Controls.MetroTile();
             this.metroTabPageSettings = new MetroFramework.Controls.MetroTabPage();
             this.metroLinkSettingsAuthor = new MetroFramework.Controls.MetroLink();
             this.metroLabelSettingsAuthor = new MetroFramework.Controls.MetroLabel();
@@ -78,15 +78,17 @@
             this.metroLabelSettingsCredits = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxSettingsLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroToolTipChoose = new MetroFramework.Components.MetroToolTip();
+            this.metroLabelConvertAIO = new MetroFramework.Controls.MetroLabel();
+            this.metroToggleConvertAIO = new MetroFramework.Controls.MetroToggle();
             this.metroTabControlContainer.SuspendLayout();
             this.metroTabPageLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).BeginInit();
+            this.metroTabPageExport.SuspendLayout();
             this.metroTabPageChoose.SuspendLayout();
             this.metroTabControlPreview.SuspendLayout();
             this.metroTabPagePreviewHtml.SuspendLayout();
             this.metroTabPagePreviewText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).BeginInit();
-            this.metroTabPageExport.SuspendLayout();
             this.metroTabPageSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +111,7 @@
             this.richTextBoxPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxPreview.Location = new System.Drawing.Point(3, 30);
             this.richTextBoxPreview.Name = "richTextBoxPreview";
-            this.richTextBoxPreview.Size = new System.Drawing.Size(428, 288);
+            this.richTextBoxPreview.Size = new System.Drawing.Size(186, 41);
             this.richTextBoxPreview.TabIndex = 0;
             this.richTextBoxPreview.Text = "";
             // 
@@ -213,157 +215,10 @@
             this.metroTileLoadExportXML.UseTileImage = true;
             this.metroTileLoadExportXML.Click += new System.EventHandler(this.metroTileLoadExportXML_Click);
             // 
-            // metroTabPageChoose
-            // 
-            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseTip);
-            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseDeselectAll);
-            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseSelectAll);
-            this.metroTabPageChoose.Controls.Add(this.metroTabControlPreview);
-            this.metroTabPageChoose.Controls.Add(this.metroLabelCount);
-            this.metroTabPageChoose.Controls.Add(this.dataGridViewArticles);
-            this.metroTabPageChoose.HorizontalScrollbarBarColor = true;
-            this.metroTabPageChoose.Location = new System.Drawing.Point(4, 25);
-            this.metroTabPageChoose.Name = "metroTabPageChoose";
-            this.metroTabPageChoose.Size = new System.Drawing.Size(752, 371);
-            this.metroTabPageChoose.Style = "Blue";
-            this.metroTabPageChoose.TabIndex = 1;
-            this.metroTabPageChoose.Text = "Choose articles";
-            this.metroTabPageChoose.VerticalScrollbarBarColor = true;
-            this.metroTabPageChoose.Visible = false;
-            // 
-            // metroButtonChooseTip
-            // 
-            this.metroButtonChooseTip.Highlight = true;
-            this.metroButtonChooseTip.Location = new System.Drawing.Point(168, 11);
-            this.metroButtonChooseTip.Name = "metroButtonChooseTip";
-            this.metroButtonChooseTip.Size = new System.Drawing.Size(31, 23);
-            this.metroButtonChooseTip.TabIndex = 7;
-            this.metroButtonChooseTip.Text = "Help";
-            // 
-            // metroButtonChooseDeselectAll
-            // 
-            this.metroButtonChooseDeselectAll.Location = new System.Drawing.Point(87, 11);
-            this.metroButtonChooseDeselectAll.Name = "metroButtonChooseDeselectAll";
-            this.metroButtonChooseDeselectAll.Size = new System.Drawing.Size(75, 23);
-            this.metroButtonChooseDeselectAll.TabIndex = 6;
-            this.metroButtonChooseDeselectAll.Text = "Deselect all";
-            this.metroButtonChooseDeselectAll.Click += new System.EventHandler(this.metroButtonChooseDeselectAll_Click);
-            // 
-            // metroButtonChooseSelectAll
-            // 
-            this.metroButtonChooseSelectAll.Location = new System.Drawing.Point(6, 11);
-            this.metroButtonChooseSelectAll.Name = "metroButtonChooseSelectAll";
-            this.metroButtonChooseSelectAll.Size = new System.Drawing.Size(75, 23);
-            this.metroButtonChooseSelectAll.TabIndex = 5;
-            this.metroButtonChooseSelectAll.Text = "Select all";
-            this.metroButtonChooseSelectAll.Click += new System.EventHandler(this.metroButtonChooseSelectAll_Click);
-            // 
-            // metroTabControlPreview
-            // 
-            this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewHtml);
-            this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewText);
-            this.metroTabControlPreview.Location = new System.Drawing.Point(311, 11);
-            this.metroTabControlPreview.Name = "metroTabControlPreview";
-            this.metroTabControlPreview.SelectedIndex = 0;
-            this.metroTabControlPreview.Size = new System.Drawing.Size(442, 347);
-            this.metroTabControlPreview.TabIndex = 1;
-            // 
-            // metroTabPagePreviewHtml
-            // 
-            this.metroTabPagePreviewHtml.Controls.Add(this.webBrowserHtml);
-            this.metroTabPagePreviewHtml.Controls.Add(this.metroLabelPreviewTitleHtml);
-            this.metroTabPagePreviewHtml.HorizontalScrollbarBarColor = true;
-            this.metroTabPagePreviewHtml.Location = new System.Drawing.Point(4, 25);
-            this.metroTabPagePreviewHtml.Name = "metroTabPagePreviewHtml";
-            this.metroTabPagePreviewHtml.Size = new System.Drawing.Size(434, 318);
-            this.metroTabPagePreviewHtml.TabIndex = 0;
-            this.metroTabPagePreviewHtml.Text = "html preview";
-            this.metroTabPagePreviewHtml.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabelPreviewTitleHtml
-            // 
-            this.metroLabelPreviewTitleHtml.AutoSize = true;
-            this.metroLabelPreviewTitleHtml.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
-            this.metroLabelPreviewTitleHtml.Location = new System.Drawing.Point(3, 4);
-            this.metroLabelPreviewTitleHtml.Name = "metroLabelPreviewTitleHtml";
-            this.metroLabelPreviewTitleHtml.Size = new System.Drawing.Size(106, 25);
-            this.metroLabelPreviewTitleHtml.TabIndex = 2;
-            this.metroLabelPreviewTitleHtml.Text = "metroLabel1";
-            this.metroLabelPreviewTitleHtml.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // metroTabPagePreviewText
-            // 
-            this.metroTabPagePreviewText.Controls.Add(this.metroLabelPreviewTitleText);
-            this.metroTabPagePreviewText.Controls.Add(this.richTextBoxPreview);
-            this.metroTabPagePreviewText.HorizontalScrollbarBarColor = true;
-            this.metroTabPagePreviewText.Location = new System.Drawing.Point(4, 25);
-            this.metroTabPagePreviewText.Name = "metroTabPagePreviewText";
-            this.metroTabPagePreviewText.Size = new System.Drawing.Size(434, 318);
-            this.metroTabPagePreviewText.TabIndex = 1;
-            this.metroTabPagePreviewText.Text = "text preview";
-            this.metroTabPagePreviewText.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabelPreviewTitleText
-            // 
-            this.metroLabelPreviewTitleText.AutoSize = true;
-            this.metroLabelPreviewTitleText.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
-            this.metroLabelPreviewTitleText.Location = new System.Drawing.Point(3, 4);
-            this.metroLabelPreviewTitleText.Name = "metroLabelPreviewTitleText";
-            this.metroLabelPreviewTitleText.Size = new System.Drawing.Size(106, 25);
-            this.metroLabelPreviewTitleText.TabIndex = 3;
-            this.metroLabelPreviewTitleText.Text = "metroLabel1";
-            this.metroLabelPreviewTitleText.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // metroLabelCount
-            // 
-            this.metroLabelCount.AutoSize = true;
-            this.metroLabelCount.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
-            this.metroLabelCount.Location = new System.Drawing.Point(3, 337);
-            this.metroLabelCount.Name = "metroLabelCount";
-            this.metroLabelCount.Size = new System.Drawing.Size(83, 19);
-            this.metroLabelCount.TabIndex = 4;
-            this.metroLabelCount.Text = "metroLabel1";
-            // 
-            // dataGridViewArticles
-            // 
-            this.dataGridViewArticles.AllowUserToAddRows = false;
-            this.dataGridViewArticles.AllowUserToDeleteRows = false;
-            this.dataGridViewArticles.AllowUserToResizeRows = false;
-            this.dataGridViewArticles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridViewArticles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewArticles.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridViewArticles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewArticles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dataGridViewArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnExport,
-            this.ColumnTitle});
-            this.dataGridViewArticles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewArticles.Location = new System.Drawing.Point(6, 40);
-            this.dataGridViewArticles.MultiSelect = false;
-            this.dataGridViewArticles.Name = "dataGridViewArticles";
-            this.dataGridViewArticles.RowHeadersVisible = false;
-            this.dataGridViewArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewArticles.ShowEditingIcon = false;
-            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 290);
-            this.dataGridViewArticles.TabIndex = 2;
-            this.dataGridViewArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArticles_CellClick);
-            // 
-            // ColumnExport
-            // 
-            this.ColumnExport.HeaderText = "Convert";
-            this.ColumnExport.Name = "ColumnExport";
-            this.ColumnExport.Width = 50;
-            // 
-            // ColumnTitle
-            // 
-            this.ColumnTitle.HeaderText = "Title";
-            this.ColumnTitle.Name = "ColumnTitle";
-            this.ColumnTitle.Width = 52;
-            // 
             // metroTabPageExport
             // 
+            this.metroTabPageExport.Controls.Add(this.metroToggleConvertAIO);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertAIO);
             this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormat);
             this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatPdf);
             this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatDocx);
@@ -466,6 +321,155 @@
             this.metroTileConvert.UseTileImage = true;
             this.metroTileConvert.Click += new System.EventHandler(this.metroTileConvert_Click);
             // 
+            // metroTabPageChoose
+            // 
+            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseTip);
+            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseDeselectAll);
+            this.metroTabPageChoose.Controls.Add(this.metroButtonChooseSelectAll);
+            this.metroTabPageChoose.Controls.Add(this.metroTabControlPreview);
+            this.metroTabPageChoose.Controls.Add(this.metroLabelCount);
+            this.metroTabPageChoose.Controls.Add(this.dataGridViewArticles);
+            this.metroTabPageChoose.HorizontalScrollbarBarColor = true;
+            this.metroTabPageChoose.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPageChoose.Name = "metroTabPageChoose";
+            this.metroTabPageChoose.Size = new System.Drawing.Size(752, 371);
+            this.metroTabPageChoose.Style = "Blue";
+            this.metroTabPageChoose.TabIndex = 1;
+            this.metroTabPageChoose.Text = "Choose articles";
+            this.metroTabPageChoose.VerticalScrollbarBarColor = true;
+            this.metroTabPageChoose.Visible = false;
+            // 
+            // metroButtonChooseTip
+            // 
+            this.metroButtonChooseTip.Highlight = true;
+            this.metroButtonChooseTip.Location = new System.Drawing.Point(168, 11);
+            this.metroButtonChooseTip.Name = "metroButtonChooseTip";
+            this.metroButtonChooseTip.Size = new System.Drawing.Size(31, 23);
+            this.metroButtonChooseTip.TabIndex = 7;
+            this.metroButtonChooseTip.Text = "Help";
+            // 
+            // metroButtonChooseDeselectAll
+            // 
+            this.metroButtonChooseDeselectAll.Location = new System.Drawing.Point(87, 11);
+            this.metroButtonChooseDeselectAll.Name = "metroButtonChooseDeselectAll";
+            this.metroButtonChooseDeselectAll.Size = new System.Drawing.Size(75, 23);
+            this.metroButtonChooseDeselectAll.TabIndex = 6;
+            this.metroButtonChooseDeselectAll.Text = "Deselect all";
+            this.metroButtonChooseDeselectAll.Click += new System.EventHandler(this.metroButtonChooseDeselectAll_Click);
+            // 
+            // metroButtonChooseSelectAll
+            // 
+            this.metroButtonChooseSelectAll.Location = new System.Drawing.Point(6, 11);
+            this.metroButtonChooseSelectAll.Name = "metroButtonChooseSelectAll";
+            this.metroButtonChooseSelectAll.Size = new System.Drawing.Size(75, 23);
+            this.metroButtonChooseSelectAll.TabIndex = 5;
+            this.metroButtonChooseSelectAll.Text = "Select all";
+            this.metroButtonChooseSelectAll.Click += new System.EventHandler(this.metroButtonChooseSelectAll_Click);
+            // 
+            // metroTabControlPreview
+            // 
+            this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewHtml);
+            this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewText);
+            this.metroTabControlPreview.Location = new System.Drawing.Point(311, 11);
+            this.metroTabControlPreview.Name = "metroTabControlPreview";
+            this.metroTabControlPreview.SelectedIndex = 1;
+            this.metroTabControlPreview.Size = new System.Drawing.Size(442, 347);
+            this.metroTabControlPreview.TabIndex = 1;
+            // 
+            // metroTabPagePreviewHtml
+            // 
+            this.metroTabPagePreviewHtml.Controls.Add(this.webBrowserHtml);
+            this.metroTabPagePreviewHtml.Controls.Add(this.metroLabelPreviewTitleHtml);
+            this.metroTabPagePreviewHtml.HorizontalScrollbarBarColor = true;
+            this.metroTabPagePreviewHtml.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPagePreviewHtml.Name = "metroTabPagePreviewHtml";
+            this.metroTabPagePreviewHtml.Size = new System.Drawing.Size(434, 318);
+            this.metroTabPagePreviewHtml.TabIndex = 0;
+            this.metroTabPagePreviewHtml.Text = "html preview";
+            this.metroTabPagePreviewHtml.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabelPreviewTitleHtml
+            // 
+            this.metroLabelPreviewTitleHtml.AutoSize = true;
+            this.metroLabelPreviewTitleHtml.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
+            this.metroLabelPreviewTitleHtml.Location = new System.Drawing.Point(3, 4);
+            this.metroLabelPreviewTitleHtml.Name = "metroLabelPreviewTitleHtml";
+            this.metroLabelPreviewTitleHtml.Size = new System.Drawing.Size(103, 25);
+            this.metroLabelPreviewTitleHtml.TabIndex = 2;
+            this.metroLabelPreviewTitleHtml.Text = "metroLabel1";
+            this.metroLabelPreviewTitleHtml.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // metroTabPagePreviewText
+            // 
+            this.metroTabPagePreviewText.Controls.Add(this.metroLabelPreviewTitleText);
+            this.metroTabPagePreviewText.Controls.Add(this.richTextBoxPreview);
+            this.metroTabPagePreviewText.HorizontalScrollbarBarColor = true;
+            this.metroTabPagePreviewText.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPagePreviewText.Name = "metroTabPagePreviewText";
+            this.metroTabPagePreviewText.Size = new System.Drawing.Size(434, 318);
+            this.metroTabPagePreviewText.TabIndex = 1;
+            this.metroTabPagePreviewText.Text = "text preview";
+            this.metroTabPagePreviewText.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabelPreviewTitleText
+            // 
+            this.metroLabelPreviewTitleText.AutoSize = true;
+            this.metroLabelPreviewTitleText.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
+            this.metroLabelPreviewTitleText.Location = new System.Drawing.Point(3, 4);
+            this.metroLabelPreviewTitleText.Name = "metroLabelPreviewTitleText";
+            this.metroLabelPreviewTitleText.Size = new System.Drawing.Size(103, 25);
+            this.metroLabelPreviewTitleText.TabIndex = 3;
+            this.metroLabelPreviewTitleText.Text = "metroLabel1";
+            this.metroLabelPreviewTitleText.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // metroLabelCount
+            // 
+            this.metroLabelCount.AutoSize = true;
+            this.metroLabelCount.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
+            this.metroLabelCount.Location = new System.Drawing.Point(3, 337);
+            this.metroLabelCount.Name = "metroLabelCount";
+            this.metroLabelCount.Size = new System.Drawing.Size(81, 19);
+            this.metroLabelCount.TabIndex = 4;
+            this.metroLabelCount.Text = "metroLabel1";
+            // 
+            // dataGridViewArticles
+            // 
+            this.dataGridViewArticles.AllowUserToAddRows = false;
+            this.dataGridViewArticles.AllowUserToDeleteRows = false;
+            this.dataGridViewArticles.AllowUserToResizeRows = false;
+            this.dataGridViewArticles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewArticles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewArticles.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridViewArticles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewArticles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dataGridViewArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnExport,
+            this.ColumnTitle});
+            this.dataGridViewArticles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewArticles.Location = new System.Drawing.Point(6, 40);
+            this.dataGridViewArticles.MultiSelect = false;
+            this.dataGridViewArticles.Name = "dataGridViewArticles";
+            this.dataGridViewArticles.RowHeadersVisible = false;
+            this.dataGridViewArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewArticles.ShowEditingIcon = false;
+            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 294);
+            this.dataGridViewArticles.TabIndex = 2;
+            this.dataGridViewArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArticles_CellClick);
+            // 
+            // ColumnExport
+            // 
+            this.ColumnExport.HeaderText = "Convert";
+            this.ColumnExport.Name = "ColumnExport";
+            this.ColumnExport.Width = 50;
+            // 
+            // ColumnTitle
+            // 
+            this.ColumnTitle.HeaderText = "Title";
+            this.ColumnTitle.Name = "ColumnTitle";
+            this.ColumnTitle.Width = 52;
+            // 
             // metroTabPageSettings
             // 
             this.metroTabPageSettings.Controls.Add(this.metroLinkSettingsAuthor);
@@ -544,7 +548,7 @@
             this.metroLabelSettingsProxyServer.AutoSize = true;
             this.metroLabelSettingsProxyServer.Location = new System.Drawing.Point(41, 275);
             this.metroLabelSettingsProxyServer.Name = "metroLabelSettingsProxyServer";
-            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(49, 19);
+            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(51, 19);
             this.metroLabelSettingsProxyServer.TabIndex = 12;
             this.metroLabelSettingsProxyServer.Text = "Server:";
             // 
@@ -645,6 +649,27 @@
             this.metroToolTipChoose.AutomaticDelay = 250;
             this.metroToolTipChoose.Tag = "";
             // 
+            // metroLabelConvertAIO
+            // 
+            this.metroLabelConvertAIO.AutoSize = true;
+            this.metroLabelConvertAIO.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
+            this.metroLabelConvertAIO.Location = new System.Drawing.Point(433, 33);
+            this.metroLabelConvertAIO.Name = "metroLabelConvertAIO";
+            this.metroLabelConvertAIO.Size = new System.Drawing.Size(153, 19);
+            this.metroLabelConvertAIO.TabIndex = 13;
+            this.metroLabelConvertAIO.Text = "All articles in one file:";
+            // 
+            // metroToggleConvertAIO
+            // 
+            this.metroToggleConvertAIO.AutoSize = true;
+            this.metroToggleConvertAIO.DisplayStatus = false;
+            this.metroToggleConvertAIO.Location = new System.Drawing.Point(445, 63);
+            this.metroToggleConvertAIO.Name = "metroToggleConvertAIO";
+            this.metroToggleConvertAIO.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleConvertAIO.TabIndex = 14;
+            this.metroToggleConvertAIO.Text = "Aus";
+            this.metroToggleConvertAIO.CheckedChanged += new System.EventHandler(this.metroToggleConvertAIO_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -661,6 +686,8 @@
             this.metroTabPageLoad.ResumeLayout(false);
             this.metroTabPageLoad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).EndInit();
+            this.metroTabPageExport.ResumeLayout(false);
+            this.metroTabPageExport.PerformLayout();
             this.metroTabPageChoose.ResumeLayout(false);
             this.metroTabPageChoose.PerformLayout();
             this.metroTabControlPreview.ResumeLayout(false);
@@ -669,8 +696,6 @@
             this.metroTabPagePreviewText.ResumeLayout(false);
             this.metroTabPagePreviewText.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).EndInit();
-            this.metroTabPageExport.ResumeLayout(false);
-            this.metroTabPageExport.PerformLayout();
             this.metroTabPageSettings.ResumeLayout(false);
             this.metroTabPageSettings.PerformLayout();
             this.ResumeLayout(false);
@@ -728,6 +753,8 @@
         private MetroFramework.Controls.MetroLabel metroLabelSettingsUseProxy;
         private MetroFramework.Controls.MetroLink metroLinkSettingsAuthor;
         private MetroFramework.Controls.MetroLabel metroLabelSettingsAuthor;
+        private MetroFramework.Controls.MetroToggle metroToggleConvertAIO;
+        private MetroFramework.Controls.MetroLabel metroLabelConvertAIO;
     }
 }
 
