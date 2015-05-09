@@ -282,15 +282,21 @@ namespace Wordpress2Doc
             dataGridViewArticles.Size = new Size(306, 294);
         }
 
+        private static string SanitizeXMLString(string inp)
+        {
+            return Regex.Replace(inp, @"[^\u0009\u000A\u000D\u0020-\uD7FF\uE000-\uFFFD\u10000-\u10FFFF]", "987654321");
+        }
 
         private void LoadExportXml(string file)
         {
             try
             {
-                xDoc = XDocument.Load(file);
+                string xmlRaw = File.ReadAllText(file);
+                File.WriteAllText(file.Replace(".xml", "_.xml"), SanitizeXMLString(xmlRaw));
                 dataGridViewArticles.Rows.Clear();                
                 metroLabelCount.Text = loc.C_lblArticleCountZero;
-                var articleList = xDoc.Root.Descendants("item").ToList();
+                XNamespace nsWp = "http://wordpress.org/export/1.2/";
+                var articleList = xDoc.Root.Descendants("item").Where(x => x.Descendants(nsWp + "post_type").Count() == 0 || x.Descendants(nsWp + "post_type").First().Value == "post" || x.Descendants(nsWp + "post_type").First().Value == "page").ToList();
                 if (articleList.Count == 0)
                 {
                     richTextBoxPreview.Clear();
@@ -302,7 +308,7 @@ namespace Wordpress2Doc
                 {
                     DataGridViewRow dgrv = new DataGridViewRow();
                     dgrv.Tag = item.Descendants("link").First().Value;
-                    dgrv.CreateCells(dataGridViewArticles, true, item.Descendants("title").First().Value);
+                    dgrv.CreateCells(dataGridViewArticles, true, item.Descendants("title").First().Value);                   
                     dataGridViewArticles.Rows.Add(dgrv);
                 });
 
