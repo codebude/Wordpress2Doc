@@ -292,7 +292,7 @@ namespace Wordpress2Doc
             try
             {
                 string xmlRaw = File.ReadAllText(file);
-                File.WriteAllText(file.Replace(".xml", "_.xml"), SanitizeXMLString(xmlRaw));
+                xDoc = XDocument.Parse(SanitizeXMLString(xmlRaw));
                 dataGridViewArticles.Rows.Clear();                
                 metroLabelCount.Text = loc.C_lblArticleCountZero;
                 XNamespace nsWp = "http://wordpress.org/export/1.2/";
@@ -308,7 +308,7 @@ namespace Wordpress2Doc
                 {
                     DataGridViewRow dgrv = new DataGridViewRow();
                     dgrv.Tag = item.Descendants("link").First().Value;
-                    dgrv.CreateCells(dataGridViewArticles, true, item.Descendants("title").First().Value);                   
+                    dgrv.CreateCells(dataGridViewArticles, true, item.Descendants("title").First().Value);
                     dataGridViewArticles.Rows.Add(dgrv);
                 });
 
