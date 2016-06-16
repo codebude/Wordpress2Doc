@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="hi" language-long="Hindi" application="Wordpress2Doc" author="Debashish" author-link="http://debashish.com" lastedit-ts="635538320910843439" lastedit="Wednesday, 16. June 2016 18:14:51" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">ब्लॉग पोस्ट का पूर्वावलोकन करने हेतु पंक्ति पर डबलक्लिक करें</ressource>
+    <ressource label="C_lblConvertStatus">समग्र लेख / </ressource>
+    <ressource label="C_lblConvertStatus2">निर्यात हेतु चुने हुये</ressource>
+    <ressource label="C_hwLoadExportFile">इस टैब का उपयोग करने से पहले कृपया "निर्यात लोड" टैब पर जाएँ और एक वर्डप्रेस निर्यात फ़ाइल खोलें।</ressource>
+    <ressource label="C_lblArticleCountZero">कोई लेख उपलब्ध नहीं</ressource>
+    <ressource label="C_dlgNoArticles">निर्यात फ़ाइल रिक्त है। कोई लेख नहीं है।</ressource>
+    <ressource label="V_ofdFilter">क्षमल फ़ाइलें</ressource>
+    <ressource label="V_ofdFilter2">सभी फ़ाइलें</ressource>
+    <ressource label="C_dlgInvalidExportFile">कृपया कोई मान्य वर्डप्रेस निर्यात फ़ाइल का चयन करें। आपकी चुनी फ़ाइल वेल फार्म्ड नहीं है।</ressource>
+    <ressource label="C_dlgNoArticleChosen">कृपया कम से कम एक ब्लॉग पोस्ट का चयन करें जिसे परिवर्तत किया जाना है!</ressource>
+    <ressource label="C_fbdDescription">निर्यात फ़ोल्डर का चयन करें</ressource>
+    <ressource label="C_lblConvertStatusReady">श्रीमान, कार्य संपन्न हो गया!</ressource>
+    <ressource label="C_lblConvertStatusProgress">आलेख परिवर्तन जारी</ressource>
+    <ressource label="C_lblConvertStatusProgress2">के</ressource>
+    <ressource label="C_dlgErrorInExport">कोई त्रुटि थी! :(</ressource>
+    <ressource label="C_tpLoad">निर्यात लोड</ressource>
+    <ressource label="C_lblStartDescription">वर्डप्रेस निर्यात क्षमल फ़ाइल खोलने और परिवर्तन 
+प्रक्रिया प्रारंभ करने के लिए यहाँ क्लिक करें।</ressource>
+    <ressource label="C_mtHelp">मदद</ressource>
+    <ressource label="C_mtSettings">सेटिंग्स &amp;&amp; जानकारी</ressource>
+    <ressource label="C_mtLoadEportFile">वर्डप्रेस निर्यात क्षमल लोड</ressource>
+    <ressource label="C_tpChoose">लेख का चयन</ressource>
+    <ressource label="C_btnChooseTip">मदद</ressource>
+    <ressource label="C_btnDeselectAll">सभी अचयनित</ressource>
+    <ressource label="C_btnSelectAll">सभी चयनित</ressource>
+    <ressource label="C_tpPreviewWeb">एचटीएमएल पूर्वावलोकन</ressource>
+    <ressource label="C_tpPreviewText">पाठ पूर्वावलोकन</ressource>
+    <ressource label="C_clmnExport">परिवर्तित करें</ressource>
+    <ressource label="C_clmnTitle">शीर्षक</ressource>
+    <ressource label="C_tpExport">परिवर्तन और निर्यात</ressource>
+    <ressource label="C_lblConvertFormat">के रूप में निर्यात करें:</ressource>
+    <ressource label="C_mtConvertStart">चुने आलेख बदलें</ressource>
+    <ressource label="C_tpSettings">सेटिंग्स</ressource>
+    <ressource label="C_lblSettingsStyle">थीम &amp;&amp; शैली</ressource>
+    <ressource label="C_lblSettingsLanguage">भाषा</ressource>
+    <ressource label="C_btnSettingsClose">सेटिंग बंद करें</ressource>
+    <ressource label="C_lblSettingsCredits">जानकारी &amp;&amp; आभार</ressource>
+    <ressource label="C_lblUseProxy">प्रॉक्सी का उपयोग करें</ressource>
+    <ressource label="C_lblProxyServer">सर्वर:</ressource>
+    <ressource label="C_lblProxyPort">पोर्ट:</ressource>
+    <ressource label="C_lblSettingsTranslated">अनुवादक:</ressource>
+    <ressource label="C_dlgErrorHelp">मदद फ़ाइल खोली नहीं जा सकी। त्रुटि:</ressource>
+    <ressource label="C_lblConvertAIO">एक फ़ाइल में सभी लेख:</ressource>
+  </ressources>
+</translation>
