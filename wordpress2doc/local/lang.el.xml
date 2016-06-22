@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="el" language-long="Greek" application="Wordpress2Doc" author="Phovos Tromou" author-link="http://phovos.net" lastedit-ts="636022299606280066" lastedit="Mittwoch, 22. Juni 2016 22:06:00" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">Κάνετε διπλό κλικ σε ένα σειρά για να δείτε το άρθρο</ressource>
+    <ressource label="C_lblConvertStatus">'αρθρα σύνολο /</ressource>
+    <ressource label="C_lblConvertStatus2">επιλεγμένα για εξαγωγή</ressource>
+    <ressource label="C_hwLoadExportFile">Παρακαλώ πατάτε στην καρτέλα “Φόρτηση εξαγωγής” και ανοίξτε ενα  αρχείο εκαγωγής του Wordpress πριν να πατάτε αυτήν την καρτέλα.</ressource>
+    <ressource label="C_lblArticleCountZero">Δεν υπάρχουν άρθρα</ressource>
+    <ressource label="C_dlgNoArticles">Αρχείο εξαγωγής είναι άδειο. Δεν υπάρχουν άρθρα.</ressource>
+    <ressource label="V_ofdFilter">Αρχεία XML</ressource>
+    <ressource label="V_ofdFilter2">Όλα τα αρχεία</ressource>
+    <ressource label="C_dlgInvalidExportFile">Παρακαλώ επιλέξτε έγκυρο αρχείο εκαγωγής του Wordpress. Το αρχείο που επίλεκες σχηματίζεται άσχημα.</ressource>
+    <ressource label="C_dlgNoArticleChosen">Παρακαλώ επιλέξτε τουλάχιστο ένα άρθρο για μετατροπή!</ressource>
+    <ressource label="C_fbdDescription">Επιλέξτε φάκελο για εξαγωγή</ressource>
+    <ressource label="C_lblConvertStatusReady">Τελείωσα! (Τελείωσαν όλες τις δουλειές)</ressource>
+    <ressource label="C_lblConvertStatusProgress">Μετατροπή άρθρου</ressource>
+    <ressource label="C_lblConvertStatusProgress2">από</ressource>
+    <ressource label="C_dlgErrorInExport">Υπάρχει λάθος! :(</ressource>
+    <ressource label="C_tpLoad">Φόρτηση εξαγωγής</ressource>
+    <ressource label="C_lblStartDescription">Πατάτε εδώ να ανοίξτε ενα αρχείο εκαγωγής του Wordpress και να αρχίζετε την μετατροπή.</ressource>
+    <ressource label="C_mtHelp">Βοήθεια</ressource>
+    <ressource label="C_mtSettings">Ρυθμίσεις &amp;&amp; Πληροφορείες</ressource>
+    <ressource label="C_mtLoadEportFile">Φόρτηση αρχείου εκαγωγής του Wordpress</ressource>
+    <ressource label="C_tpChoose">Επιλέξτε άρθρα</ressource>
+    <ressource label="C_btnChooseTip">Βοήθεια</ressource>
+    <ressource label="C_btnDeselectAll">Aποεπιλογή όλων</ressource>
+    <ressource label="C_btnSelectAll">Επίλεξη όλων</ressource>
+    <ressource label="C_tpPreviewWeb">Προεπισκόπηση HTML</ressource>
+    <ressource label="C_tpPreviewText">Προεπισκόπηση κειμένου</ressource>
+    <ressource label="C_clmnExport">Μετατροπή</ressource>
+    <ressource label="C_clmnTitle">Τίτλος</ressource>
+    <ressource label="C_tpExport">Μετατροπή και εξαγωγή</ressource>
+    <ressource label="C_lblConvertFormat">Εξαγωγή ως ...</ressource>
+    <ressource label="C_mtConvertStart">Μετατροπή επιλεγμένων άρθρων</ressource>
+    <ressource label="C_tpSettings">Ρυθμίσεις</ressource>
+    <ressource label="C_lblSettingsStyle">Χρώμα &amp; Στυλ</ressource>
+    <ressource label="C_lblSettingsLanguage">Γλώσσα</ressource>
+    <ressource label="C_btnSettingsClose">Κλείσε Ρυθμίσεις</ressource>
+    <ressource label="C_lblSettingsCredits">Πληροφορείες &amp; Πιστώσεις </ressource>
+    <ressource label="C_lblUseProxy">Χρησιμοποίηση Proxy (υπηρετή)</ressource>
+    <ressource label="C_lblProxyServer">Υπηρέτης</ressource>
+    <ressource label="C_lblProxyPort">Θύρα</ressource>
+    <ressource label="C_lblSettingsTranslated">Aρχικό κείμενο:</ressource>
+    <ressource label="C_dlgErrorHelp">Δεν θα μπορούσε να ανοίξει το αρχείο βοήθειας. Τους συνέβη κατά λάθος:</ressource>
+    <ressource label="C_lblConvertAIO">Όλα τα άρθρα σε ένα αρχείο:</ressource>
+  </ressources>
+</translation>

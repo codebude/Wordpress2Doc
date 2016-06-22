@@ -129,6 +129,7 @@ namespace Wordpress2Doc
             metroLabelSettingsAuthor.Text = loc.C_lblSettingsTranslated;
             metroLinkSettingsAuthor.Text = loc.GetInfo.Author;
             metroLinkSettingsAuthor.Tag = loc.GetInfo.AuthorLink;
+            RenderLoadFilePlease();
         }
 
         private void LoadLanguageSettings()
