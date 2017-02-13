@@ -129,6 +129,7 @@ namespace Wordpress2Doc
             metroLabelSettingsAuthor.Text = loc.C_lblSettingsTranslated;
             metroLinkSettingsAuthor.Text = loc.GetInfo.Author;
             metroLinkSettingsAuthor.Tag = loc.GetInfo.AuthorLink;
+            metroToolTipChoose.SetToolTip(metroButtonChooseTip, loc.C_ttPreviewTip);
             RenderLoadFilePlease();
         }
 
