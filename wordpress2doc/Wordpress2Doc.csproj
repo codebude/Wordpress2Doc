@@ -157,6 +157,9 @@
     <Content Include="local\lang.en.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="local\lang.es.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="local\lang.fa.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

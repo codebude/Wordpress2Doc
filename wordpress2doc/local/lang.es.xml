@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="es" language-long="Spanish" application="Wordpress2Doc" author="Hugo Sanchez" author-link="" lastedit-ts="636225799737107506" lastedit="Montag, 13. Februar 2017 10:52:53" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">Haz doble clic en una fila para previsualizar el post</ressource>
+    <ressource label="C_lblConvertStatus"> artículos totales / </ressource>
+    <ressource label="C_lblConvertStatus2"> comprobados para su exportado</ressource>
+    <ressource label="C_hwLoadExportFile">Por favor, cambie a la pestaña “Cargar para exportado”
+y abra un archivo de exportado Wordpress antes
+de usar esta pestaña.</ressource>
+    <ressource label="C_lblArticleCountZero">No hay artículos</ressource>
+    <ressource label="C_dlgNoArticles">El archivo de exportado está vacío. No se han encontrado artículos.</ressource>
+    <ressource label="V_ofdFilter">Archivos Xml</ressource>
+    <ressource label="V_ofdFilter2">Todos los archivos</ressource>
+    <ressource label="C_dlgInvalidExportFile">Por favor, escoja un archive de exportado de Wordpress válido. El archivoque has escogido no está bien formateado.</ressource>
+    <ressource label="C_dlgNoArticleChosen">Por favor, ¡selecciona al menos un post del blog para ser convertido!</ressource>
+    <ressource label="C_fbdDescription">Elige el directorio de exportado</ressource>
+    <ressource label="C_lblConvertStatusReady">¡Ya está hecho!</ressource>
+    <ressource label="C_lblConvertStatusProgress">Convirtiendo artículo</ressource>
+    <ressource label="C_lblConvertStatusProgress2">de</ressource>
+    <ressource label="C_dlgErrorInExport">¡Ocurrió un error! :(</ressource>
+    <ressource label="C_tpLoad">Cargar exportado</ressource>
+    <ressource label="C_lblStartDescription">Haz clic aquí para abrir un archive de
+exportado XML de Wordpressy empezar 
+el proceso de conversion.</ressource>
+    <ressource label="C_mtHelp">Ayuda</ressource>
+    <ressource label="C_mtSettings">Configuración &amp;&amp; información</ressource>
+    <ressource label="C_mtLoadEportFile">Cargar export.xml de WordPress</ressource>
+    <ressource label="C_tpChoose">Elegir artículos</ressource>
+    <ressource label="C_btnChooseTip">Ayuda</ressource>
+    <ressource label="C_btnDeselectAll">Deseleccionar todos</ressource>
+    <ressource label="C_btnSelectAll">Seleccionar todos</ressource>
+    <ressource label="C_tpPreviewWeb">Previsualización de html</ressource>
+    <ressource label="C_tpPreviewText">Previsualización de texto</ressource>
+    <ressource label="C_clmnExport">Convertir</ressource>
+    <ressource label="C_clmnTitle">Título</ressource>
+    <ressource label="C_tpExport">Convertir y exportar</ressource>
+    <ressource label="C_lblConvertFormat">Exportar como:</ressource>
+    <ressource label="C_mtConvertStart">Convertir artículos elegidos</ressource>
+    <ressource label="C_tpSettings">Configuración</ressource>
+    <ressource label="C_lblSettingsStyle">Tema &amp;&amp; estilo</ressource>
+    <ressource label="C_lblSettingsLanguage">Idioma</ressource>
+    <ressource label="C_btnSettingsClose">Cerrar configuración</ressource>
+    <ressource label="C_lblSettingsCredits">Información &amp;&amp; creditos</ressource>
+    <ressource label="C_lblUseProxy">Usar proxy</ressource>
+    <ressource label="C_lblProxyServer">Servidor:</ressource>
+    <ressource label="C_lblProxyPort">Puerto:</ressource>
+    <ressource label="C_lblSettingsTranslated">traducido por:</ressource>
+    <ressource label="C_dlgErrorHelp">No se pudo abrir el archivo de ayuda. Ocurrió un error:</ressource>
+    <ressource label="C_lblConvertAIO">Todos los artículos en un archivo:</ressource>
+  </ressources>
+</translation>
