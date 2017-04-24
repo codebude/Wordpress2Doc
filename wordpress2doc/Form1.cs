@@ -27,7 +27,7 @@ namespace Wordpress2Doc
         private PrivateFontCollection fontColl;
         private Font handwrittenFont;
         private Localization loc;
-        private int version = 3;
+        private int version = 4;
 
         public Form1()
         {

@@ -100,7 +100,7 @@
             this.webBrowserHtml.Location = new System.Drawing.Point(3, 30);
             this.webBrowserHtml.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserHtml.Name = "webBrowserHtml";
-            this.webBrowserHtml.Size = new System.Drawing.Size(186, 41);
+            this.webBrowserHtml.Size = new System.Drawing.Size(20, 20);
             this.webBrowserHtml.TabIndex = 1;
             // 
             // richTextBoxPreview
@@ -111,7 +111,7 @@
             this.richTextBoxPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxPreview.Location = new System.Drawing.Point(3, 30);
             this.richTextBoxPreview.Name = "richTextBoxPreview";
-            this.richTextBoxPreview.Size = new System.Drawing.Size(186, 41);
+            this.richTextBoxPreview.Size = new System.Drawing.Size(0, 0);
             this.richTextBoxPreview.TabIndex = 0;
             this.richTextBoxPreview.Text = "";
             // 
@@ -119,24 +119,24 @@
             // 
             this.progressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarStatus.Location = new System.Drawing.Point(31, 314);
+            this.progressBarStatus.Location = new System.Drawing.Point(40, 259);
             this.progressBarStatus.Name = "progressBarStatus";
-            this.progressBarStatus.Size = new System.Drawing.Size(692, 42);
+            this.progressBarStatus.Size = new System.Drawing.Size(664, 35);
             this.progressBarStatus.TabIndex = 4;
             this.progressBarStatus.Visible = false;
             // 
             // metroTabControlContainer
             // 
             this.metroTabControlContainer.Controls.Add(this.metroTabPageLoad);
-            this.metroTabControlContainer.Controls.Add(this.metroTabPageExport);
             this.metroTabControlContainer.Controls.Add(this.metroTabPageChoose);
+            this.metroTabControlContainer.Controls.Add(this.metroTabPageExport);
             this.metroTabControlContainer.Controls.Add(this.metroTabPageSettings);
             this.metroTabControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlContainer.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
             this.metroTabControlContainer.HotTrack = true;
             this.metroTabControlContainer.Location = new System.Drawing.Point(20, 60);
             this.metroTabControlContainer.Name = "metroTabControlContainer";
-            this.metroTabControlContainer.SelectedIndex = 0;
+            this.metroTabControlContainer.SelectedIndex = 1;
             this.metroTabControlContainer.Size = new System.Drawing.Size(760, 400);
             this.metroTabControlContainer.TabIndex = 1;
             // 
@@ -289,6 +289,8 @@
             // 
             // metroProgressSpinner1
             // 
+            this.metroProgressSpinner1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroProgressSpinner1.Location = new System.Drawing.Point(324, 136);
             this.metroProgressSpinner1.Maximum = 100;
             this.metroProgressSpinner1.Name = "metroProgressSpinner1";
@@ -322,13 +324,15 @@
             // 
             // metroLabelConvertStatus
             // 
-            this.metroLabelConvertStatus.AutoSize = true;
+            this.metroLabelConvertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelConvertStatus.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
-            this.metroLabelConvertStatus.Location = new System.Drawing.Point(269, 288);
+            this.metroLabelConvertStatus.Location = new System.Drawing.Point(61, 297);
             this.metroLabelConvertStatus.Name = "metroLabelConvertStatus";
-            this.metroLabelConvertStatus.Size = new System.Drawing.Size(189, 25);
+            this.metroLabelConvertStatus.Size = new System.Drawing.Size(617, 25);
             this.metroLabelConvertStatus.TabIndex = 6;
             this.metroLabelConvertStatus.Text = "Show the current status";
+            this.metroLabelConvertStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabelConvertStatus.Visible = false;
             // 
             // metroTileConvert
@@ -389,11 +393,14 @@
             // 
             // metroTabControlPreview
             // 
+            this.metroTabControlPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewHtml);
             this.metroTabControlPreview.Controls.Add(this.metroTabPagePreviewText);
             this.metroTabControlPreview.Location = new System.Drawing.Point(311, 11);
             this.metroTabControlPreview.Name = "metroTabControlPreview";
-            this.metroTabControlPreview.SelectedIndex = 1;
+            this.metroTabControlPreview.SelectedIndex = 0;
             this.metroTabControlPreview.Size = new System.Drawing.Size(442, 347);
             this.metroTabControlPreview.TabIndex = 1;
             // 
@@ -445,6 +452,7 @@
             // 
             // metroLabelCount
             // 
+            this.metroLabelCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabelCount.AutoSize = true;
             this.metroLabelCount.FontSize = MetroFramework.Drawing.MetroFontSize.Medium;
             this.metroLabelCount.Location = new System.Drawing.Point(3, 337);
