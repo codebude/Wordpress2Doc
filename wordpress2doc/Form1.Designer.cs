@@ -40,6 +40,8 @@
             this.pictureBoxLoadArrow = new System.Windows.Forms.PictureBox();
             this.metroTileLoadExportXML = new MetroFramework.Controls.MetroTile();
             this.metroTabPageExport = new MetroFramework.Controls.MetroTabPage();
+            this.metroToggleConvertAIO = new MetroFramework.Controls.MetroToggle();
+            this.metroLabelConvertAIO = new MetroFramework.Controls.MetroLabel();
             this.metroLabelConvertFormat = new MetroFramework.Controls.MetroLabel();
             this.metroLabelConvertFormatPdf = new MetroFramework.Controls.MetroLabel();
             this.metroLabelConvertFormatDocx = new MetroFramework.Controls.MetroLabel();
@@ -78,8 +80,6 @@
             this.metroLabelSettingsCredits = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxSettingsLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroToolTipChoose = new MetroFramework.Components.MetroToolTip();
-            this.metroLabelConvertAIO = new MetroFramework.Controls.MetroLabel();
-            this.metroToggleConvertAIO = new MetroFramework.Controls.MetroToggle();
             this.metroTabControlContainer.SuspendLayout();
             this.metroTabPageLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).BeginInit();
@@ -100,7 +100,7 @@
             this.webBrowserHtml.Location = new System.Drawing.Point(3, 30);
             this.webBrowserHtml.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserHtml.Name = "webBrowserHtml";
-            this.webBrowserHtml.Size = new System.Drawing.Size(428, 288);
+            this.webBrowserHtml.Size = new System.Drawing.Size(186, 41);
             this.webBrowserHtml.TabIndex = 1;
             // 
             // richTextBoxPreview
@@ -136,7 +136,7 @@
             this.metroTabControlContainer.HotTrack = true;
             this.metroTabControlContainer.Location = new System.Drawing.Point(20, 60);
             this.metroTabControlContainer.Name = "metroTabControlContainer";
-            this.metroTabControlContainer.SelectedIndex = 1;
+            this.metroTabControlContainer.SelectedIndex = 0;
             this.metroTabControlContainer.Size = new System.Drawing.Size(760, 400);
             this.metroTabControlContainer.TabIndex = 1;
             // 
@@ -237,6 +237,27 @@
             this.metroTabPageExport.Text = "Convert and export";
             this.metroTabPageExport.VerticalScrollbarBarColor = true;
             this.metroTabPageExport.Visible = false;
+            // 
+            // metroToggleConvertAIO
+            // 
+            this.metroToggleConvertAIO.AutoSize = true;
+            this.metroToggleConvertAIO.DisplayStatus = false;
+            this.metroToggleConvertAIO.Location = new System.Drawing.Point(445, 63);
+            this.metroToggleConvertAIO.Name = "metroToggleConvertAIO";
+            this.metroToggleConvertAIO.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleConvertAIO.TabIndex = 14;
+            this.metroToggleConvertAIO.Text = "Aus";
+            this.metroToggleConvertAIO.CheckedChanged += new System.EventHandler(this.metroToggleConvertAIO_CheckedChanged);
+            // 
+            // metroLabelConvertAIO
+            // 
+            this.metroLabelConvertAIO.AutoSize = true;
+            this.metroLabelConvertAIO.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
+            this.metroLabelConvertAIO.Location = new System.Drawing.Point(433, 33);
+            this.metroLabelConvertAIO.Name = "metroLabelConvertAIO";
+            this.metroLabelConvertAIO.Size = new System.Drawing.Size(153, 19);
+            this.metroLabelConvertAIO.TabIndex = 13;
+            this.metroLabelConvertAIO.Text = "All articles in one file:";
             // 
             // metroLabelConvertFormat
             // 
@@ -454,7 +475,7 @@
             this.dataGridViewArticles.RowHeadersVisible = false;
             this.dataGridViewArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewArticles.ShowEditingIcon = false;
-            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 294);
+            this.dataGridViewArticles.Size = new System.Drawing.Size(306, 0);
             this.dataGridViewArticles.TabIndex = 2;
             this.dataGridViewArticles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArticles_CellClick);
             // 
@@ -648,27 +669,6 @@
             // 
             this.metroToolTipChoose.AutomaticDelay = 250;
             this.metroToolTipChoose.Tag = "";
-            // 
-            // metroLabelConvertAIO
-            // 
-            this.metroLabelConvertAIO.AutoSize = true;
-            this.metroLabelConvertAIO.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
-            this.metroLabelConvertAIO.Location = new System.Drawing.Point(433, 33);
-            this.metroLabelConvertAIO.Name = "metroLabelConvertAIO";
-            this.metroLabelConvertAIO.Size = new System.Drawing.Size(153, 19);
-            this.metroLabelConvertAIO.TabIndex = 13;
-            this.metroLabelConvertAIO.Text = "All articles in one file:";
-            // 
-            // metroToggleConvertAIO
-            // 
-            this.metroToggleConvertAIO.AutoSize = true;
-            this.metroToggleConvertAIO.DisplayStatus = false;
-            this.metroToggleConvertAIO.Location = new System.Drawing.Point(445, 63);
-            this.metroToggleConvertAIO.Name = "metroToggleConvertAIO";
-            this.metroToggleConvertAIO.Size = new System.Drawing.Size(50, 17);
-            this.metroToggleConvertAIO.TabIndex = 14;
-            this.metroToggleConvertAIO.Text = "Aus";
-            this.metroToggleConvertAIO.CheckedChanged += new System.EventHandler(this.metroToggleConvertAIO_CheckedChanged);
             // 
             // Form1
             // 

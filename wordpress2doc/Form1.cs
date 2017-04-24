@@ -238,17 +238,14 @@ namespace Wordpress2Doc
 
         private void HideLoadFilePlease()
         {
-            if (metroTabPageChoose.Controls.Cast<Control>().Where(x => x.Name == "blockpanel").Count() > 0)
+            var tabPages = new Control[] { metroTabPageExport, metroTabPageChoose };
+            foreach (var tabPage in tabPages)
             {
-                var con = metroTabPageChoose.Controls.Cast<Control>().Where(x => x.Name == "blockpanel").First();
-                var con2 = metroTabPageExport.Controls.Cast<Control>().Where(x => x.Name == "blockpanel").First();
-                metroTabPageChoose.Controls.RemoveByKey("blockpanel");
-                metroTabPageExport.Controls.RemoveByKey("blockpanel");
-                con.Dispose();
-                con = null;
-                con2.Dispose();
-                con2 = null;
-            }
+                while (tabPage.Controls.Cast<Control>().Where(x => x.Name == "blockpanel").Count() > 0)
+                {
+                    tabPage.Controls.RemoveByKey("blockpanel");
+                }
+            }            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -601,6 +598,18 @@ namespace Wordpress2Doc
                 (((object[])e.Argument)[0] as List<XElement>).ForEach(item =>
                 {
                     var contentBody = item.Descendants(nsContent + "encoded").First().Value.Replace("\n", "<br />");
+
+                    //Clean BB-Code images
+                    Regex re = new Regex(@"\[imag.*?src=""(.*?)"".*?\]\[\/image\]", RegexOptions.Multiline | RegexOptions.Singleline);
+                    MatchCollection mc = re.Matches(contentBody);
+                    foreach (Match m in mc)
+                    {
+                        try
+                        {
+                            contentBody = contentBody.Replace(m.Value, "<img src=\"" + m.Groups[1].Value + "\">");
+                        }
+                        catch { }
+                    }
 
                     if (!(bool)((object[])e.Argument)[4]) // != AllInOne
                     {
