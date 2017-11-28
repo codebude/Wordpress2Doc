@@ -12,13 +12,14 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO.Packaging;
 using System.Xml;
-using Pechkin;
 using MetroFramework.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
 using MetroFramework.Components;
 using System.Reflection;
 using System.Net;
+using TuesPechkin;
+using System.Drawing.Printing;
 
 namespace Wordpress2Doc
 {
@@ -392,16 +393,38 @@ namespace Wordpress2Doc
 
         private void SaveHtmlAsPdf(string fName, string html)
         {
-            GlobalConfig cfg = new GlobalConfig();
-            SimplePechkin sp = new SimplePechkin(cfg);
-            ObjectConfig oc = new ObjectConfig();
-            oc.SetCreateExternalLinks(true)
-                .SetFallbackEncoding(Encoding.ASCII)
-                .SetLoadImages(true)
-                .SetAllowLocalContent(true)
-                .SetPrintBackground(true);
+            var document = new HtmlToPdfDocument
+            {
+                GlobalSettings =
+                {
+                    ProduceOutline = true,
+                    DocumentTitle = "Pretty Websites",
+                    PaperSize = PaperKind.A4,                    
+                    Margins =
+                    {
+                        All = 1.375,
+                        Unit = Unit.Centimeters
+                    },                   
+                },
+                Objects = {
+                    new ObjectSettings {
+                        HtmlText = "<html><head><style>html * { font-family: Arial !important; }</style><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title></title></head><body>" + html + "</body></html>",
+                        WebSettings = new WebSettings(){
+                            LoadImages = true,
+                            PrintBackground = true
+                        },
+                        ProduceExternalLinks = true,
+                        LoadSettings = new LoadSettings(){
+                            BlockLocalFileAccess = false,
+                            StopSlowScript = false
+                        }
+                    }
+                }
+            };
+
+            IConverter converter = new StandardConverter(new PdfToolset(new WinAnyCPUEmbeddedDeployment(new TempFolderDeployment())));
+            byte[] pdfBuf = converter.Convert(document);
             
-            byte[] pdfBuf = sp.Convert(oc, "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title></title></head><body>" + html + "</body></html>");
             FileStream fs = new FileStream(fName, FileMode.Create, FileAccess.ReadWrite);
             foreach (var byteSymbol in pdfBuf)
                 fs.WriteByte(byteSymbol);
