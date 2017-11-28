@@ -5,7 +5,8 @@
     <ressource label="C_ttPreviewTip">Egy soron duplán kattintva meg lehet nézni cikk előnézetét.</ressource>
     <ressource label="C_lblConvertStatus"> tartalom / </ressource>
     <ressource label="C_lblConvertStatus2"> exportálásra kiválasztva</ressource>
-    <ressource label="C_hwLoadExportFile">Kérlek ezen fül használata előtt válaszd az “Export fájl betöltése” fület!</ressource>
+    <ressource label="C_hwLoadExportFile">Kérlek ezen fül használata előtt válaszd az
+"Export fájl betöltése" fület!</ressource>
     <ressource label="C_lblArticleCountZero">Nincs tartalom</ressource>
     <ressource label="C_dlgNoArticles">Az export fájl üres. Nincs tartalom.</ressource>
     <ressource label="V_ofdFilter">XML fájl</ressource>
@@ -18,7 +19,9 @@
     <ressource label="C_lblConvertStatusProgress2">ennyiből</ressource>
     <ressource label="C_dlgErrorInExport">Valami hiba történt! :(</ressource>
     <ressource label="C_tpLoad">Export fájl betöltése</ressource>
-    <ressource label="C_lblStartDescription">Kattints ide, hogy megnyiss egy WordPress export XML-t, és elkezdhesd a konvertálást!</ressource>
+    <ressource label="C_lblStartDescription">Kattints ide, hogy megnyiss egy
+WordPress export XML-t, és elkezdhesd
+a konvertálást!</ressource>
     <ressource label="C_mtHelp">Segítség</ressource>
     <ressource label="C_mtSettings">Beállítások &amp;&amp; Info</ressource>
     <ressource label="C_mtLoadEportFile">WordPress export XML betöltése</ressource>
