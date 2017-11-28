@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<translation>
+  <info language="hu" language-long="Hungarian" application="Wordpress2Doc" author="Adam Szucs" author-link="https://wordpress.video.hu" lastedit-ts="636474981339260307" lastedit="Dienstag, 28. November 2017 20:35:33" />
+  <ressources>
+    <ressource label="C_ttPreviewTip">Egy soron duplán kattintva meg lehet nézni cikk előnézetét.</ressource>
+    <ressource label="C_lblConvertStatus"> tartalom / </ressource>
+    <ressource label="C_lblConvertStatus2"> exportálásra kiválasztva</ressource>
+    <ressource label="C_hwLoadExportFile">Kérlek ezen fül használata előtt válaszd az “Export fájl betöltése” fület!</ressource>
+    <ressource label="C_lblArticleCountZero">Nincs tartalom</ressource>
+    <ressource label="C_dlgNoArticles">Az export fájl üres. Nincs tartalom.</ressource>
+    <ressource label="V_ofdFilter">XML fájl</ressource>
+    <ressource label="V_ofdFilter2">Összes fájl</ressource>
+    <ressource label="C_dlgInvalidExportFile">Kérlek válassz megfelelően formázott WordPress export fájlt. A kiválasztott fájl nem ilyen.</ressource>
+    <ressource label="C_dlgNoArticleChosen">Legalább egy cikket válassz ki konvertálásra!</ressource>
+    <ressource label="C_fbdDescription">Válassz mappát.</ressource>
+    <ressource label="C_lblConvertStatusReady">Uram, megvagyunk! Mindennel végeztem!</ressource>
+    <ressource label="C_lblConvertStatusProgress">Tartalom konvertás</ressource>
+    <ressource label="C_lblConvertStatusProgress2">ennyiből</ressource>
+    <ressource label="C_dlgErrorInExport">Valami hiba történt! :(</ressource>
+    <ressource label="C_tpLoad">Export fájl betöltése</ressource>
+    <ressource label="C_lblStartDescription">Kattints ide, hogy megnyiss egy WordPress export XML-t, és elkezdhesd a konvertálást!</ressource>
+    <ressource label="C_mtHelp">Segítség</ressource>
+    <ressource label="C_mtSettings">Beállítások &amp;&amp; Info</ressource>
+    <ressource label="C_mtLoadEportFile">WordPress export XML betöltése</ressource>
+    <ressource label="C_tpChoose">Válassz tartalmakat!</ressource>
+    <ressource label="C_btnChooseTip">Segítség</ressource>
+    <ressource label="C_btnDeselectAll">Kijelölés megszüntetése</ressource>
+    <ressource label="C_btnSelectAll">Összes kijelölése</ressource>
+    <ressource label="C_tpPreviewWeb">html előnézet</ressource>
+    <ressource label="C_tpPreviewText">szöveges előnézet</ressource>
+    <ressource label="C_clmnExport">Konvertálás</ressource>
+    <ressource label="C_clmnTitle">Cím</ressource>
+    <ressource label="C_tpExport">Konvertálás és exportálás</ressource>
+    <ressource label="C_lblConvertFormat">Konvertálás ebbe:</ressource>
+    <ressource label="C_mtConvertStart">A kiválasztott tartalom konvertálása</ressource>
+    <ressource label="C_tpSettings">Beállítások</ressource>
+    <ressource label="C_lblSettingsStyle">Kinézet &amp;&amp; stílus</ressource>
+    <ressource label="C_lblSettingsLanguage">Nyelv</ressource>
+    <ressource label="C_btnSettingsClose">Beállítások bezárása</ressource>
+    <ressource label="C_lblSettingsCredits">Info &amp;&amp; kredit</ressource>
+    <ressource label="C_lblUseProxy">Proxy használata</ressource>
+    <ressource label="C_lblProxyServer">Szerver:</ressource>
+    <ressource label="C_lblProxyPort">Port:</ressource>
+    <ressource label="C_lblSettingsTranslated">fordította:</ressource>
+    <ressource label="C_dlgErrorHelp">A súgófájlt nem lehet megnyitni. Hiba történt:</ressource>
+    <ressource label="C_lblConvertAIO">Minden fájl egyetlen fájlban:</ressource>
+  </ressources>
+</translation>
