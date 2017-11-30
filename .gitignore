@@ -215,3 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 wordpress2doc/.vs/Wordpress2Doc/v15/sqlite3/storage.ide
 *.nupkg
+wordpress2doc/packages/TuesPechkin.2.1.1/lib/net20/TuesPechkin.dll
+wordpress2doc/packages/TuesPechkin.Wkhtmltox.AnyCPU.0.12.4.1/lib/net20/TuesPechkin.Wkhtmltox.AnyCPU.dll
