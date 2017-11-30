@@ -184,6 +184,8 @@ namespace Wordpress2Doc
     
         XDocument xDoc;
         XNamespace nsContent = "http://purl.org/rss/1.0/modules/content/";
+        XNamespace nsDc = "http://purl.org/dc/elements/1.1/";
+        XNamespace nsWp = "http://wordpress.org/export/1.2/";
 
         private void RenderArticlePreview()
         {
@@ -622,6 +624,37 @@ namespace Wordpress2Doc
                 {
                     var contentBody = item.Descendants(nsContent + "encoded").First().Value.Replace("\n", "<br />");
 
+                    //Metadata
+                    var creator = item.Descendants(nsDc + "creator").First().Value;
+                    var pubDate = DateTime.Parse(item.Descendants("pubDate").First().Value);
+                    var categories = new List<WpCategory>();
+                    foreach (var cat in item.Descendants("category"))
+                    {
+                        try
+                        {
+                            categories.Add(new WpCategory()
+                            {
+                                Domain = cat.Attribute("domain").Value,
+                                Name = cat.Value,
+                                NiceName = cat.Attribute("nicename").Value
+                            });
+                        }
+                        catch
+                        {
+                            //Ignore if category tag hasn't needed attributes
+                        }
+                    }
+
+                    //Create metadata html
+                    var headerLineTemplate = "<i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i>";
+
+                    var dtFormat = Regex.Match(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}").Groups["dtformat"];
+                    var catStr = string.Join(", ", categories.Select(x => $"{x.Domain}: {x.NiceName}"));
+                    var headerLineHtml = Regex.Replace(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}", string.Format("{0:" + dtFormat + "}",pubDate));
+                    headerLineHtml = headerLineHtml.Replace("{{creator}}", creator);
+                    headerLineHtml = headerLineHtml.Replace("{{categories}}", catStr);
+
+                
                     //Clean BB-Code images
                     Regex re = new Regex(@"\[imag.*?src=""(.*?)"".*?\]\[\/image\]", RegexOptions.Multiline | RegexOptions.Singleline);
                     MatchCollection mc = re.Matches(contentBody);
@@ -738,6 +771,13 @@ namespace Wordpress2Doc
         private void metroToggleConvertAIO_CheckedChanged(object sender, EventArgs e)
         {
             SettingsHelper.SetAppSetting("AIO", metroToggleConvertAIO.Checked.ToString());
+        }
+
+        private class WpCategory
+        {
+            public string Name { get; set; }
+            public string NiceName { get; set; }
+            public string Domain { get; set; }
         }
         
     }
