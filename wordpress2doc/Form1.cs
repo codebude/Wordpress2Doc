@@ -626,8 +626,9 @@ namespace Wordpress2Doc
 
                     //Metadata
                     var creator = item.Descendants(nsDc + "creator").First().Value;
-                    var pubDate = DateTime.Parse(item.Descendants("pubDate").First().Value);
+                    DateTime pubDate;                    
                     var categories = new List<WpCategory>();
+                    var title = item.Descendants("title").First().Value;
                     foreach (var cat in item.Descendants("category"))
                     {
                         try
@@ -646,14 +647,24 @@ namespace Wordpress2Doc
                     }
 
                     //Create metadata html
-                    var headerLineTemplate = "<i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i>";
+                    var headerLineTemplate = "<h1>{{title}}</h1><i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i><br/><br/>";
 
                     var dtFormat = Regex.Match(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}").Groups["dtformat"];
                     var catStr = string.Join(", ", categories.Select(x => $"{x.Domain}: {x.NiceName}"));
-                    var headerLineHtml = Regex.Replace(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}", string.Format("{0:" + dtFormat + "}",pubDate));
+                    var pubDateStr = string.Empty;
+                    if (DateTime.TryParse(item.Descendants("pubDate").First().Value, out pubDate))
+                    {
+                        pubDateStr = string.Format("{0:" + dtFormat + "}", pubDate);
+                    }
+                    else
+                    {
+                        pubDateStr = $"({loc.C_txtUnpublished})";
+                    }
+                    var headerLineHtml = Regex.Replace(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}", pubDateStr);
                     headerLineHtml = headerLineHtml.Replace("{{creator}}", creator);
+                    headerLineHtml = headerLineHtml.Replace("{{title}}", title);
                     headerLineHtml = headerLineHtml.Replace("{{categories}}", catStr);
-
+                    
                 
                     //Clean BB-Code images
                     Regex re = new Regex(@"\[imag.*?src=""(.*?)"".*?\]\[\/image\]", RegexOptions.Multiline | RegexOptions.Singleline);
@@ -665,7 +676,7 @@ namespace Wordpress2Doc
                             contentBody = contentBody.Replace(m.Value, "<img src=\"" + m.Groups[1].Value + "\">");
                         }
                         catch { }
-                    }
+                    }                    
 
                     if (!(bool)((object[])e.Argument)[4]) // != AllInOne
                     {
@@ -674,14 +685,14 @@ namespace Wordpress2Doc
                         var fNamePdf = string.Concat(fNameBase, ".pdf");
 
                         if ((bool)((object[])e.Argument)[2])
-                            SaveHtmlAsDocx(fNameDocx, contentBody);
+                            SaveHtmlAsDocx(fNameDocx, $"{headerLineHtml}{contentBody}");
 
                         if ((bool)((object[])e.Argument)[3])
-                            SaveHtmlAsPdf(fNamePdf, contentBody);
+                            SaveHtmlAsPdf(fNamePdf, $"{headerLineHtml}{contentBody}");
                     }
                     else
                     {
-                        masterBody += "<article><h1>" + item.Descendants("title").First().Value + "</h1><br/>" + contentBody + "</article><br/><br/><br/>";
+                        masterBody += $"<article>{headerLineHtml}{contentBody}</article><br/><br/><br/>";
                     }
 
                     (sender as BackgroundWorker).ReportProgress(0);

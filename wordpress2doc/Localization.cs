@@ -142,6 +142,7 @@ namespace Wordpress2Doc
         public string C_lblSettingsTranslated { get { return GetText("C_lblSettingsTranslated"); } }
         public string C_dlgErrorHelp { get { return GetText("C_dlgErrorHelp"); } }
         public string C_lblConvertAIO { get { return GetText("C_lblConvertAIO"); } }
+        public string C_txtUnpublished { get { return GetText("C_txtUnpublished"); } }
 
         public struct TranslationInfo
         {
