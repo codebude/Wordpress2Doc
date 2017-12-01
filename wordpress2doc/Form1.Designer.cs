@@ -39,17 +39,6 @@
             this.metroTileSettings = new MetroFramework.Controls.MetroTile();
             this.pictureBoxLoadArrow = new System.Windows.Forms.PictureBox();
             this.metroTileLoadExportXML = new MetroFramework.Controls.MetroTile();
-            this.metroTabPageExport = new MetroFramework.Controls.MetroTabPage();
-            this.metroToggleConvertAIO = new MetroFramework.Controls.MetroToggle();
-            this.metroLabelConvertAIO = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelConvertFormat = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelConvertFormatPdf = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelConvertFormatDocx = new MetroFramework.Controls.MetroLabel();
-            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.metroToggleFormatDocx = new MetroFramework.Controls.MetroToggle();
-            this.metroToggleFormatPdf = new MetroFramework.Controls.MetroToggle();
-            this.metroLabelConvertStatus = new MetroFramework.Controls.MetroLabel();
-            this.metroTileConvert = new MetroFramework.Controls.MetroTile();
             this.metroTabPageChoose = new MetroFramework.Controls.MetroTabPage();
             this.metroButtonChooseTip = new MetroFramework.Controls.MetroButton();
             this.metroButtonChooseDeselectAll = new MetroFramework.Controls.MetroButton();
@@ -63,6 +52,17 @@
             this.dataGridViewArticles = new System.Windows.Forms.DataGridView();
             this.ColumnExport = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabPageExport = new MetroFramework.Controls.MetroTabPage();
+            this.metroToggleConvertAIO = new MetroFramework.Controls.MetroToggle();
+            this.metroLabelConvertAIO = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelConvertFormat = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelConvertFormatPdf = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelConvertFormatDocx = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.metroToggleFormatDocx = new MetroFramework.Controls.MetroToggle();
+            this.metroToggleFormatPdf = new MetroFramework.Controls.MetroToggle();
+            this.metroLabelConvertStatus = new MetroFramework.Controls.MetroLabel();
+            this.metroTileConvert = new MetroFramework.Controls.MetroTile();
             this.metroTabPageSettings = new MetroFramework.Controls.MetroTabPage();
             this.metroLinkSettingsAuthor = new MetroFramework.Controls.MetroLink();
             this.metroLabelSettingsAuthor = new MetroFramework.Controls.MetroLabel();
@@ -77,19 +77,23 @@
             this.richTextBoxSettingsCredits = new System.Windows.Forms.RichTextBox();
             this.metroButtonSettingsClose = new MetroFramework.Controls.MetroButton();
             this.metroComboBoxSettingsStyle = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabelSettingsCredits = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxSettingsLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroToolTipChoose = new MetroFramework.Components.MetroToolTip();
+            this.tabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.metroTabControlContainer.SuspendLayout();
             this.metroTabPageLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).BeginInit();
-            this.metroTabPageExport.SuspendLayout();
             this.metroTabPageChoose.SuspendLayout();
             this.metroTabControlPreview.SuspendLayout();
             this.metroTabPagePreviewHtml.SuspendLayout();
             this.metroTabPagePreviewText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).BeginInit();
+            this.metroTabPageExport.SuspendLayout();
             this.metroTabPageSettings.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // webBrowserHtml
@@ -119,9 +123,9 @@
             // 
             this.progressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarStatus.Location = new System.Drawing.Point(40, 259);
+            this.progressBarStatus.Location = new System.Drawing.Point(40, -41);
             this.progressBarStatus.Name = "progressBarStatus";
-            this.progressBarStatus.Size = new System.Drawing.Size(664, 35);
+            this.progressBarStatus.Size = new System.Drawing.Size(104, 35);
             this.progressBarStatus.TabIndex = 4;
             this.progressBarStatus.Visible = false;
             // 
@@ -136,7 +140,7 @@
             this.metroTabControlContainer.HotTrack = true;
             this.metroTabControlContainer.Location = new System.Drawing.Point(20, 60);
             this.metroTabControlContainer.Name = "metroTabControlContainer";
-            this.metroTabControlContainer.SelectedIndex = 1;
+            this.metroTabControlContainer.SelectedIndex = 3;
             this.metroTabControlContainer.Size = new System.Drawing.Size(760, 400);
             this.metroTabControlContainer.TabIndex = 1;
             // 
@@ -214,137 +218,6 @@
             this.metroTileLoadExportXML.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.metroTileLoadExportXML.UseTileImage = true;
             this.metroTileLoadExportXML.Click += new System.EventHandler(this.metroTileLoadExportXML_Click);
-            // 
-            // metroTabPageExport
-            // 
-            this.metroTabPageExport.Controls.Add(this.metroToggleConvertAIO);
-            this.metroTabPageExport.Controls.Add(this.metroLabelConvertAIO);
-            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormat);
-            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatPdf);
-            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatDocx);
-            this.metroTabPageExport.Controls.Add(this.metroProgressSpinner1);
-            this.metroTabPageExport.Controls.Add(this.metroToggleFormatDocx);
-            this.metroTabPageExport.Controls.Add(this.metroToggleFormatPdf);
-            this.metroTabPageExport.Controls.Add(this.metroLabelConvertStatus);
-            this.metroTabPageExport.Controls.Add(this.metroTileConvert);
-            this.metroTabPageExport.Controls.Add(this.progressBarStatus);
-            this.metroTabPageExport.HorizontalScrollbarBarColor = true;
-            this.metroTabPageExport.Location = new System.Drawing.Point(4, 25);
-            this.metroTabPageExport.Name = "metroTabPageExport";
-            this.metroTabPageExport.Size = new System.Drawing.Size(752, 371);
-            this.metroTabPageExport.Style = "Blue";
-            this.metroTabPageExport.TabIndex = 2;
-            this.metroTabPageExport.Text = "Convert and export";
-            this.metroTabPageExport.VerticalScrollbarBarColor = true;
-            this.metroTabPageExport.Visible = false;
-            // 
-            // metroToggleConvertAIO
-            // 
-            this.metroToggleConvertAIO.AutoSize = true;
-            this.metroToggleConvertAIO.DisplayStatus = false;
-            this.metroToggleConvertAIO.Location = new System.Drawing.Point(445, 63);
-            this.metroToggleConvertAIO.Name = "metroToggleConvertAIO";
-            this.metroToggleConvertAIO.Size = new System.Drawing.Size(50, 17);
-            this.metroToggleConvertAIO.TabIndex = 14;
-            this.metroToggleConvertAIO.Text = "Aus";
-            this.metroToggleConvertAIO.CheckedChanged += new System.EventHandler(this.metroToggleConvertAIO_CheckedChanged);
-            // 
-            // metroLabelConvertAIO
-            // 
-            this.metroLabelConvertAIO.AutoSize = true;
-            this.metroLabelConvertAIO.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
-            this.metroLabelConvertAIO.Location = new System.Drawing.Point(433, 33);
-            this.metroLabelConvertAIO.Name = "metroLabelConvertAIO";
-            this.metroLabelConvertAIO.Size = new System.Drawing.Size(153, 19);
-            this.metroLabelConvertAIO.TabIndex = 13;
-            this.metroLabelConvertAIO.Text = "All articles in one file:";
-            // 
-            // metroLabelConvertFormat
-            // 
-            this.metroLabelConvertFormat.AutoSize = true;
-            this.metroLabelConvertFormat.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
-            this.metroLabelConvertFormat.Location = new System.Drawing.Point(244, 33);
-            this.metroLabelConvertFormat.Name = "metroLabelConvertFormat";
-            this.metroLabelConvertFormat.Size = new System.Drawing.Size(75, 19);
-            this.metroLabelConvertFormat.TabIndex = 12;
-            this.metroLabelConvertFormat.Text = "Export as:";
-            // 
-            // metroLabelConvertFormatPdf
-            // 
-            this.metroLabelConvertFormatPdf.AutoSize = true;
-            this.metroLabelConvertFormatPdf.Location = new System.Drawing.Point(244, 90);
-            this.metroLabelConvertFormatPdf.Name = "metroLabelConvertFormatPdf";
-            this.metroLabelConvertFormatPdf.Size = new System.Drawing.Size(32, 19);
-            this.metroLabelConvertFormatPdf.TabIndex = 11;
-            this.metroLabelConvertFormatPdf.Text = ".pdf";
-            // 
-            // metroLabelConvertFormatDocx
-            // 
-            this.metroLabelConvertFormatDocx.AutoSize = true;
-            this.metroLabelConvertFormatDocx.Location = new System.Drawing.Point(244, 61);
-            this.metroLabelConvertFormatDocx.Name = "metroLabelConvertFormatDocx";
-            this.metroLabelConvertFormatDocx.Size = new System.Drawing.Size(40, 19);
-            this.metroLabelConvertFormatDocx.TabIndex = 10;
-            this.metroLabelConvertFormatDocx.Text = ".docx";
-            // 
-            // metroProgressSpinner1
-            // 
-            this.metroProgressSpinner1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(324, 136);
-            this.metroProgressSpinner1.Maximum = 100;
-            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
-            this.metroProgressSpinner1.Size = new System.Drawing.Size(116, 116);
-            this.metroProgressSpinner1.TabIndex = 9;
-            this.metroProgressSpinner1.Visible = false;
-            // 
-            // metroToggleFormatDocx
-            // 
-            this.metroToggleFormatDocx.AutoSize = true;
-            this.metroToggleFormatDocx.Checked = true;
-            this.metroToggleFormatDocx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggleFormatDocx.DisplayStatus = false;
-            this.metroToggleFormatDocx.Location = new System.Drawing.Point(306, 63);
-            this.metroToggleFormatDocx.Name = "metroToggleFormatDocx";
-            this.metroToggleFormatDocx.Size = new System.Drawing.Size(50, 17);
-            this.metroToggleFormatDocx.TabIndex = 8;
-            this.metroToggleFormatDocx.Text = "An";
-            this.metroToggleFormatDocx.CheckedChanged += new System.EventHandler(this.metroToggleFormatDocx_CheckedChanged);
-            // 
-            // metroToggleFormatPdf
-            // 
-            this.metroToggleFormatPdf.AutoSize = true;
-            this.metroToggleFormatPdf.DisplayStatus = false;
-            this.metroToggleFormatPdf.Location = new System.Drawing.Point(306, 92);
-            this.metroToggleFormatPdf.Name = "metroToggleFormatPdf";
-            this.metroToggleFormatPdf.Size = new System.Drawing.Size(50, 17);
-            this.metroToggleFormatPdf.TabIndex = 7;
-            this.metroToggleFormatPdf.Text = "Aus";
-            this.metroToggleFormatPdf.CheckedChanged += new System.EventHandler(this.metroToggleFormatDocx_CheckedChanged);
-            // 
-            // metroLabelConvertStatus
-            // 
-            this.metroLabelConvertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabelConvertStatus.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
-            this.metroLabelConvertStatus.Location = new System.Drawing.Point(61, 297);
-            this.metroLabelConvertStatus.Name = "metroLabelConvertStatus";
-            this.metroLabelConvertStatus.Size = new System.Drawing.Size(617, 25);
-            this.metroLabelConvertStatus.TabIndex = 6;
-            this.metroLabelConvertStatus.Text = "Show the current status";
-            this.metroLabelConvertStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabelConvertStatus.Visible = false;
-            // 
-            // metroTileConvert
-            // 
-            this.metroTileConvert.Location = new System.Drawing.Point(31, 33);
-            this.metroTileConvert.Name = "metroTileConvert";
-            this.metroTileConvert.Size = new System.Drawing.Size(160, 88);
-            this.metroTileConvert.TabIndex = 5;
-            this.metroTileConvert.Text = "Convert choosen articles";
-            this.metroTileConvert.TileImage = global::Wordpress2Doc.Properties.Resources.convert;
-            this.metroTileConvert.UseTileImage = true;
-            this.metroTileConvert.Click += new System.EventHandler(this.metroTileConvert_Click);
             // 
             // metroTabPageChoose
             // 
@@ -499,8 +372,140 @@
             this.ColumnTitle.Name = "ColumnTitle";
             this.ColumnTitle.Width = 52;
             // 
+            // metroTabPageExport
+            // 
+            this.metroTabPageExport.Controls.Add(this.metroToggleConvertAIO);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertAIO);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormat);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatPdf);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertFormatDocx);
+            this.metroTabPageExport.Controls.Add(this.metroProgressSpinner1);
+            this.metroTabPageExport.Controls.Add(this.metroToggleFormatDocx);
+            this.metroTabPageExport.Controls.Add(this.metroToggleFormatPdf);
+            this.metroTabPageExport.Controls.Add(this.metroLabelConvertStatus);
+            this.metroTabPageExport.Controls.Add(this.metroTileConvert);
+            this.metroTabPageExport.Controls.Add(this.progressBarStatus);
+            this.metroTabPageExport.HorizontalScrollbarBarColor = true;
+            this.metroTabPageExport.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPageExport.Name = "metroTabPageExport";
+            this.metroTabPageExport.Size = new System.Drawing.Size(752, 371);
+            this.metroTabPageExport.Style = "Blue";
+            this.metroTabPageExport.TabIndex = 2;
+            this.metroTabPageExport.Text = "Convert and export";
+            this.metroTabPageExport.VerticalScrollbarBarColor = true;
+            this.metroTabPageExport.Visible = false;
+            // 
+            // metroToggleConvertAIO
+            // 
+            this.metroToggleConvertAIO.AutoSize = true;
+            this.metroToggleConvertAIO.DisplayStatus = false;
+            this.metroToggleConvertAIO.Location = new System.Drawing.Point(445, 63);
+            this.metroToggleConvertAIO.Name = "metroToggleConvertAIO";
+            this.metroToggleConvertAIO.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleConvertAIO.TabIndex = 14;
+            this.metroToggleConvertAIO.Text = "Aus";
+            this.metroToggleConvertAIO.CheckedChanged += new System.EventHandler(this.metroToggleConvertAIO_CheckedChanged);
+            // 
+            // metroLabelConvertAIO
+            // 
+            this.metroLabelConvertAIO.AutoSize = true;
+            this.metroLabelConvertAIO.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
+            this.metroLabelConvertAIO.Location = new System.Drawing.Point(433, 33);
+            this.metroLabelConvertAIO.Name = "metroLabelConvertAIO";
+            this.metroLabelConvertAIO.Size = new System.Drawing.Size(153, 19);
+            this.metroLabelConvertAIO.TabIndex = 13;
+            this.metroLabelConvertAIO.Text = "All articles in one file:";
+            // 
+            // metroLabelConvertFormat
+            // 
+            this.metroLabelConvertFormat.AutoSize = true;
+            this.metroLabelConvertFormat.FontWeight = MetroFramework.Drawing.MetroFontWeight.Bold;
+            this.metroLabelConvertFormat.Location = new System.Drawing.Point(244, 33);
+            this.metroLabelConvertFormat.Name = "metroLabelConvertFormat";
+            this.metroLabelConvertFormat.Size = new System.Drawing.Size(75, 19);
+            this.metroLabelConvertFormat.TabIndex = 12;
+            this.metroLabelConvertFormat.Text = "Export as:";
+            // 
+            // metroLabelConvertFormatPdf
+            // 
+            this.metroLabelConvertFormatPdf.AutoSize = true;
+            this.metroLabelConvertFormatPdf.Location = new System.Drawing.Point(244, 90);
+            this.metroLabelConvertFormatPdf.Name = "metroLabelConvertFormatPdf";
+            this.metroLabelConvertFormatPdf.Size = new System.Drawing.Size(32, 19);
+            this.metroLabelConvertFormatPdf.TabIndex = 11;
+            this.metroLabelConvertFormatPdf.Text = ".pdf";
+            // 
+            // metroLabelConvertFormatDocx
+            // 
+            this.metroLabelConvertFormatDocx.AutoSize = true;
+            this.metroLabelConvertFormatDocx.Location = new System.Drawing.Point(244, 61);
+            this.metroLabelConvertFormatDocx.Name = "metroLabelConvertFormatDocx";
+            this.metroLabelConvertFormatDocx.Size = new System.Drawing.Size(40, 19);
+            this.metroLabelConvertFormatDocx.TabIndex = 10;
+            this.metroLabelConvertFormatDocx.Text = ".docx";
+            // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(324, 136);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(116, 116);
+            this.metroProgressSpinner1.TabIndex = 9;
+            this.metroProgressSpinner1.Visible = false;
+            // 
+            // metroToggleFormatDocx
+            // 
+            this.metroToggleFormatDocx.AutoSize = true;
+            this.metroToggleFormatDocx.Checked = true;
+            this.metroToggleFormatDocx.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.metroToggleFormatDocx.DisplayStatus = false;
+            this.metroToggleFormatDocx.Location = new System.Drawing.Point(306, 63);
+            this.metroToggleFormatDocx.Name = "metroToggleFormatDocx";
+            this.metroToggleFormatDocx.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleFormatDocx.TabIndex = 8;
+            this.metroToggleFormatDocx.Text = "An";
+            this.metroToggleFormatDocx.CheckedChanged += new System.EventHandler(this.metroToggleFormatDocx_CheckedChanged);
+            // 
+            // metroToggleFormatPdf
+            // 
+            this.metroToggleFormatPdf.AutoSize = true;
+            this.metroToggleFormatPdf.DisplayStatus = false;
+            this.metroToggleFormatPdf.Location = new System.Drawing.Point(306, 92);
+            this.metroToggleFormatPdf.Name = "metroToggleFormatPdf";
+            this.metroToggleFormatPdf.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleFormatPdf.TabIndex = 7;
+            this.metroToggleFormatPdf.Text = "Aus";
+            this.metroToggleFormatPdf.CheckedChanged += new System.EventHandler(this.metroToggleFormatDocx_CheckedChanged);
+            // 
+            // metroLabelConvertStatus
+            // 
+            this.metroLabelConvertStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelConvertStatus.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
+            this.metroLabelConvertStatus.Location = new System.Drawing.Point(61, 297);
+            this.metroLabelConvertStatus.Name = "metroLabelConvertStatus";
+            this.metroLabelConvertStatus.Size = new System.Drawing.Size(57, 25);
+            this.metroLabelConvertStatus.TabIndex = 6;
+            this.metroLabelConvertStatus.Text = "Show the current status";
+            this.metroLabelConvertStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabelConvertStatus.Visible = false;
+            // 
+            // metroTileConvert
+            // 
+            this.metroTileConvert.Location = new System.Drawing.Point(31, 33);
+            this.metroTileConvert.Name = "metroTileConvert";
+            this.metroTileConvert.Size = new System.Drawing.Size(160, 88);
+            this.metroTileConvert.TabIndex = 5;
+            this.metroTileConvert.Text = "Convert choosen articles";
+            this.metroTileConvert.TileImage = global::Wordpress2Doc.Properties.Resources.convert;
+            this.metroTileConvert.UseTileImage = true;
+            this.metroTileConvert.Click += new System.EventHandler(this.metroTileConvert_Click);
+            // 
             // metroTabPageSettings
             // 
+            this.metroTabPageSettings.Controls.Add(this.tabControl1);
             this.metroTabPageSettings.Controls.Add(this.metroLinkSettingsAuthor);
             this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsAuthor);
             this.metroTabPageSettings.Controls.Add(this.metroTextBoxSettingsProxyPort);
@@ -511,10 +516,8 @@
             this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsUseProxy);
             this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsStyle);
             this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsLanguage);
-            this.metroTabPageSettings.Controls.Add(this.richTextBoxSettingsCredits);
             this.metroTabPageSettings.Controls.Add(this.metroButtonSettingsClose);
             this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsStyle);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsCredits);
             this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsLanguage);
             this.metroTabPageSettings.HorizontalScrollbarBarColor = true;
             this.metroTabPageSettings.Location = new System.Drawing.Point(4, 25);
@@ -624,11 +627,11 @@
             // richTextBoxSettingsCredits
             // 
             this.richTextBoxSettingsCredits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxSettingsCredits.Location = new System.Drawing.Point(254, 94);
+            this.richTextBoxSettingsCredits.Location = new System.Drawing.Point(6, 16);
             this.richTextBoxSettingsCredits.Name = "richTextBoxSettingsCredits";
             this.richTextBoxSettingsCredits.ReadOnly = true;
             this.richTextBoxSettingsCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxSettingsCredits.Size = new System.Drawing.Size(476, 232);
+            this.richTextBoxSettingsCredits.Size = new System.Drawing.Size(482, 262);
             this.richTextBoxSettingsCredits.TabIndex = 9;
             this.richTextBoxSettingsCredits.Text = resources.GetString("richTextBoxSettingsCredits.Text");
             // 
@@ -653,15 +656,6 @@
             this.metroComboBoxSettingsStyle.TabIndex = 4;
             this.metroComboBoxSettingsStyle.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxSettingsStyle_SelectedIndexChanged);
             // 
-            // metroLabelSettingsCredits
-            // 
-            this.metroLabelSettingsCredits.AutoSize = true;
-            this.metroLabelSettingsCredits.Location = new System.Drawing.Point(254, 61);
-            this.metroLabelSettingsCredits.Name = "metroLabelSettingsCredits";
-            this.metroLabelSettingsCredits.Size = new System.Drawing.Size(90, 19);
-            this.metroLabelSettingsCredits.TabIndex = 6;
-            this.metroLabelSettingsCredits.Text = "Info && Credits";
-            // 
             // metroComboBoxSettingsLanguage
             // 
             this.metroComboBoxSettingsLanguage.FormattingEnabled = true;
@@ -677,6 +671,38 @@
             // 
             this.metroToolTipChoose.AutomaticDelay = 250;
             this.metroToolTipChoose.Tag = "";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(247, 23);
+            this.tabControl1.Name = "tabControlSettings";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(502, 316);
+            this.tabControl1.TabIndex = 18;
+            this.tabControl1.TabStop = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Article header";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.richTextBoxSettingsCredits);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(494, 290);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Info \'n\' Credit";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -694,8 +720,6 @@
             this.metroTabPageLoad.ResumeLayout(false);
             this.metroTabPageLoad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).EndInit();
-            this.metroTabPageExport.ResumeLayout(false);
-            this.metroTabPageExport.PerformLayout();
             this.metroTabPageChoose.ResumeLayout(false);
             this.metroTabPageChoose.PerformLayout();
             this.metroTabControlPreview.ResumeLayout(false);
@@ -704,8 +728,12 @@
             this.metroTabPagePreviewText.ResumeLayout(false);
             this.metroTabPagePreviewText.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).EndInit();
+            this.metroTabPageExport.ResumeLayout(false);
+            this.metroTabPageExport.PerformLayout();
             this.metroTabPageSettings.ResumeLayout(false);
             this.metroTabPageSettings.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -737,7 +765,6 @@
         private MetroFramework.Controls.MetroLabel metroLabelSettingsStyle;
         private MetroFramework.Controls.MetroLabel metroLabelSettingsLanguage;
         private MetroFramework.Controls.MetroComboBox metroComboBoxSettingsStyle;
-        private MetroFramework.Controls.MetroLabel metroLabelSettingsCredits;
         private MetroFramework.Controls.MetroComboBox metroComboBoxSettingsLanguage;
         private MetroFramework.Controls.MetroButton metroButtonSettingsClose;
         private System.Windows.Forms.RichTextBox richTextBoxSettingsCredits;
@@ -763,6 +790,9 @@
         private MetroFramework.Controls.MetroLabel metroLabelSettingsAuthor;
         private MetroFramework.Controls.MetroToggle metroToggleConvertAIO;
         private MetroFramework.Controls.MetroLabel metroLabelConvertAIO;
+        private MetroFramework.Controls.MetroTabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
