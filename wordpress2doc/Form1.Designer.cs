@@ -39,6 +39,24 @@
             this.metroTileSettings = new MetroFramework.Controls.MetroTile();
             this.pictureBoxLoadArrow = new System.Windows.Forms.PictureBox();
             this.metroTileLoadExportXML = new MetroFramework.Controls.MetroTile();
+            this.metroTabPageSettings = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabControlSettings = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPageSettingsHeader = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageSettingsCredits = new MetroFramework.Controls.MetroTabPage();
+            this.richTextBoxSettingsCredits = new System.Windows.Forms.RichTextBox();
+            this.metroLinkSettingsAuthor = new MetroFramework.Controls.MetroLink();
+            this.metroLabelSettingsAuthor = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSettingsProxyPort = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabelSettingsProxyPort = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSettingsProxy = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabelSettingsProxyServer = new MetroFramework.Controls.MetroLabel();
+            this.metroToggleSettingsProxy = new MetroFramework.Controls.MetroToggle();
+            this.metroLabelSettingsUseProxy = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelSettingsStyle = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelSettingsLanguage = new MetroFramework.Controls.MetroLabel();
+            this.metroButtonSettingsClose = new MetroFramework.Controls.MetroButton();
+            this.metroComboBoxSettingsStyle = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBoxSettingsLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroTabPageChoose = new MetroFramework.Controls.MetroTabPage();
             this.metroButtonChooseTip = new MetroFramework.Controls.MetroButton();
             this.metroButtonChooseDeselectAll = new MetroFramework.Controls.MetroButton();
@@ -63,37 +81,23 @@
             this.metroToggleFormatPdf = new MetroFramework.Controls.MetroToggle();
             this.metroLabelConvertStatus = new MetroFramework.Controls.MetroLabel();
             this.metroTileConvert = new MetroFramework.Controls.MetroTile();
-            this.metroTabPageSettings = new MetroFramework.Controls.MetroTabPage();
-            this.metroLinkSettingsAuthor = new MetroFramework.Controls.MetroLink();
-            this.metroLabelSettingsAuthor = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxSettingsProxyPort = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelSettingsProxyPort = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxSettingsProxy = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelSettingsProxyServer = new MetroFramework.Controls.MetroLabel();
-            this.metroToggleSettingsProxy = new MetroFramework.Controls.MetroToggle();
-            this.metroLabelSettingsUseProxy = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelSettingsStyle = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelSettingsLanguage = new MetroFramework.Controls.MetroLabel();
-            this.richTextBoxSettingsCredits = new System.Windows.Forms.RichTextBox();
-            this.metroButtonSettingsClose = new MetroFramework.Controls.MetroButton();
-            this.metroComboBoxSettingsStyle = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBoxSettingsLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroToolTipChoose = new MetroFramework.Components.MetroToolTip();
-            this.tabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.richTextBoxHeaderTemplate = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxHeaderDescription = new System.Windows.Forms.RichTextBox();
+            this.metroButtonResetHeaderTemplate = new MetroFramework.Controls.MetroButton();
             this.metroTabControlContainer.SuspendLayout();
             this.metroTabPageLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).BeginInit();
+            this.metroTabPageSettings.SuspendLayout();
+            this.metroTabControlSettings.SuspendLayout();
+            this.metroTabPageSettingsHeader.SuspendLayout();
+            this.metroTabPageSettingsCredits.SuspendLayout();
             this.metroTabPageChoose.SuspendLayout();
             this.metroTabControlPreview.SuspendLayout();
             this.metroTabPagePreviewHtml.SuspendLayout();
             this.metroTabPagePreviewText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).BeginInit();
             this.metroTabPageExport.SuspendLayout();
-            this.metroTabPageSettings.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // webBrowserHtml
@@ -218,6 +222,212 @@
             this.metroTileLoadExportXML.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.metroTileLoadExportXML.UseTileImage = true;
             this.metroTileLoadExportXML.Click += new System.EventHandler(this.metroTileLoadExportXML_Click);
+            // 
+            // metroTabPageSettings
+            // 
+            this.metroTabPageSettings.Controls.Add(this.metroTabControlSettings);
+            this.metroTabPageSettings.Controls.Add(this.metroLinkSettingsAuthor);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsAuthor);
+            this.metroTabPageSettings.Controls.Add(this.metroTextBoxSettingsProxyPort);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsProxyPort);
+            this.metroTabPageSettings.Controls.Add(this.metroTextBoxSettingsProxy);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsProxyServer);
+            this.metroTabPageSettings.Controls.Add(this.metroToggleSettingsProxy);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsUseProxy);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsStyle);
+            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsLanguage);
+            this.metroTabPageSettings.Controls.Add(this.metroButtonSettingsClose);
+            this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsStyle);
+            this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsLanguage);
+            this.metroTabPageSettings.HorizontalScrollbarBarColor = true;
+            this.metroTabPageSettings.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPageSettings.Name = "metroTabPageSettings";
+            this.metroTabPageSettings.Size = new System.Drawing.Size(752, 371);
+            this.metroTabPageSettings.TabIndex = 3;
+            this.metroTabPageSettings.Text = "Settings";
+            this.metroTabPageSettings.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabControlSettings
+            // 
+            this.metroTabControlSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTabControlSettings.Controls.Add(this.metroTabPageSettingsHeader);
+            this.metroTabControlSettings.Controls.Add(this.metroTabPageSettingsCredits);
+            this.metroTabControlSettings.Location = new System.Drawing.Point(247, 23);
+            this.metroTabControlSettings.Name = "metroTabControlSettings";
+            this.metroTabControlSettings.SelectedIndex = 0;
+            this.metroTabControlSettings.Size = new System.Drawing.Size(502, 316);
+            this.metroTabControlSettings.TabIndex = 18;
+            this.metroTabControlSettings.TabStop = false;
+            // 
+            // metroTabPageSettingsHeader
+            // 
+            this.metroTabPageSettingsHeader.Controls.Add(this.metroButtonResetHeaderTemplate);
+            this.metroTabPageSettingsHeader.Controls.Add(this.richTextBoxHeaderDescription);
+            this.metroTabPageSettingsHeader.Controls.Add(this.richTextBoxHeaderTemplate);
+            this.metroTabPageSettingsHeader.HorizontalScrollbarBarColor = true;
+            this.metroTabPageSettingsHeader.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPageSettingsHeader.Name = "metroTabPageSettingsHeader";
+            this.metroTabPageSettingsHeader.Padding = new System.Windows.Forms.Padding(3);
+            this.metroTabPageSettingsHeader.Size = new System.Drawing.Size(494, 287);
+            this.metroTabPageSettingsHeader.TabIndex = 0;
+            this.metroTabPageSettingsHeader.Text = "Article header";
+            this.metroTabPageSettingsHeader.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPageSettingsCredits
+            // 
+            this.metroTabPageSettingsCredits.Controls.Add(this.richTextBoxSettingsCredits);
+            this.metroTabPageSettingsCredits.HorizontalScrollbarBarColor = true;
+            this.metroTabPageSettingsCredits.Location = new System.Drawing.Point(4, 25);
+            this.metroTabPageSettingsCredits.Name = "metroTabPageSettingsCredits";
+            this.metroTabPageSettingsCredits.Padding = new System.Windows.Forms.Padding(3);
+            this.metroTabPageSettingsCredits.Size = new System.Drawing.Size(494, 287);
+            this.metroTabPageSettingsCredits.TabIndex = 1;
+            this.metroTabPageSettingsCredits.Text = "Info \'n\' Credit";
+            this.metroTabPageSettingsCredits.VerticalScrollbarBarColor = true;
+            // 
+            // richTextBoxSettingsCredits
+            // 
+            this.richTextBoxSettingsCredits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxSettingsCredits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxSettingsCredits.Location = new System.Drawing.Point(3, 3);
+            this.richTextBoxSettingsCredits.Name = "richTextBoxSettingsCredits";
+            this.richTextBoxSettingsCredits.ReadOnly = true;
+            this.richTextBoxSettingsCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxSettingsCredits.Size = new System.Drawing.Size(488, 281);
+            this.richTextBoxSettingsCredits.TabIndex = 9;
+            this.richTextBoxSettingsCredits.Text = resources.GetString("richTextBoxSettingsCredits.Text");
+            // 
+            // metroLinkSettingsAuthor
+            // 
+            this.metroLinkSettingsAuthor.FontSize = MetroFramework.Drawing.MetroFontSize.Small;
+            this.metroLinkSettingsAuthor.Location = new System.Drawing.Point(42, 198);
+            this.metroLinkSettingsAuthor.Name = "metroLinkSettingsAuthor";
+            this.metroLinkSettingsAuthor.Size = new System.Drawing.Size(176, 22);
+            this.metroLinkSettingsAuthor.TabIndex = 17;
+            this.metroLinkSettingsAuthor.Text = "Author\'s name";
+            this.metroLinkSettingsAuthor.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.metroLinkSettingsAuthor.Click += new System.EventHandler(this.metroLinkSettingsAuthor_Click);
+            // 
+            // metroLabelSettingsAuthor
+            // 
+            this.metroLabelSettingsAuthor.AutoSize = true;
+            this.metroLabelSettingsAuthor.FontSize = MetroFramework.Drawing.MetroFontSize.Small;
+            this.metroLabelSettingsAuthor.Location = new System.Drawing.Point(42, 183);
+            this.metroLabelSettingsAuthor.Name = "metroLabelSettingsAuthor";
+            this.metroLabelSettingsAuthor.Size = new System.Drawing.Size(77, 15);
+            this.metroLabelSettingsAuthor.TabIndex = 16;
+            this.metroLabelSettingsAuthor.Text = "translation by:";
+            // 
+            // metroTextBoxSettingsProxyPort
+            // 
+            this.metroTextBoxSettingsProxyPort.Location = new System.Drawing.Point(96, 300);
+            this.metroTextBoxSettingsProxyPort.Name = "metroTextBoxSettingsProxyPort";
+            this.metroTextBoxSettingsProxyPort.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBoxSettingsProxyPort.TabIndex = 15;
+            this.metroTextBoxSettingsProxyPort.Text = "metroTextBox2";
+            this.metroTextBoxSettingsProxyPort.TextChanged += new System.EventHandler(this.metroTextBoxSettingsProxy_TextChanged);
+            // 
+            // metroLabelSettingsProxyPort
+            // 
+            this.metroLabelSettingsProxyPort.AutoSize = true;
+            this.metroLabelSettingsProxyPort.Location = new System.Drawing.Point(41, 304);
+            this.metroLabelSettingsProxyPort.Name = "metroLabelSettingsProxyPort";
+            this.metroLabelSettingsProxyPort.Size = new System.Drawing.Size(37, 19);
+            this.metroLabelSettingsProxyPort.TabIndex = 14;
+            this.metroLabelSettingsProxyPort.Text = "Port:";
+            // 
+            // metroTextBoxSettingsProxy
+            // 
+            this.metroTextBoxSettingsProxy.Location = new System.Drawing.Point(96, 271);
+            this.metroTextBoxSettingsProxy.Name = "metroTextBoxSettingsProxy";
+            this.metroTextBoxSettingsProxy.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBoxSettingsProxy.TabIndex = 13;
+            this.metroTextBoxSettingsProxy.Text = "metroTextBox1";
+            this.metroTextBoxSettingsProxy.TextChanged += new System.EventHandler(this.metroTextBoxSettingsProxy_TextChanged);
+            // 
+            // metroLabelSettingsProxyServer
+            // 
+            this.metroLabelSettingsProxyServer.AutoSize = true;
+            this.metroLabelSettingsProxyServer.Location = new System.Drawing.Point(41, 275);
+            this.metroLabelSettingsProxyServer.Name = "metroLabelSettingsProxyServer";
+            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(51, 19);
+            this.metroLabelSettingsProxyServer.TabIndex = 12;
+            this.metroLabelSettingsProxyServer.Text = "Server:";
+            // 
+            // metroToggleSettingsProxy
+            // 
+            this.metroToggleSettingsProxy.AutoSize = true;
+            this.metroToggleSettingsProxy.Checked = true;
+            this.metroToggleSettingsProxy.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.metroToggleSettingsProxy.DisplayStatus = false;
+            this.metroToggleSettingsProxy.Location = new System.Drawing.Point(168, 243);
+            this.metroToggleSettingsProxy.Name = "metroToggleSettingsProxy";
+            this.metroToggleSettingsProxy.Size = new System.Drawing.Size(50, 17);
+            this.metroToggleSettingsProxy.TabIndex = 11;
+            this.metroToggleSettingsProxy.Text = "An";
+            this.metroToggleSettingsProxy.CheckedChanged += new System.EventHandler(this.metroToggleSettingsProxy_CheckedChanged);
+            // 
+            // metroLabelSettingsUseProxy
+            // 
+            this.metroLabelSettingsUseProxy.AutoSize = true;
+            this.metroLabelSettingsUseProxy.Location = new System.Drawing.Point(41, 241);
+            this.metroLabelSettingsUseProxy.Name = "metroLabelSettingsUseProxy";
+            this.metroLabelSettingsUseProxy.Size = new System.Drawing.Size(67, 19);
+            this.metroLabelSettingsUseProxy.TabIndex = 10;
+            this.metroLabelSettingsUseProxy.Text = "Use Proxy";
+            // 
+            // metroLabelSettingsStyle
+            // 
+            this.metroLabelSettingsStyle.AutoSize = true;
+            this.metroLabelSettingsStyle.Location = new System.Drawing.Point(41, 61);
+            this.metroLabelSettingsStyle.Name = "metroLabelSettingsStyle";
+            this.metroLabelSettingsStyle.Size = new System.Drawing.Size(94, 19);
+            this.metroLabelSettingsStyle.TabIndex = 2;
+            this.metroLabelSettingsStyle.Text = "Theme && Style";
+            // 
+            // metroLabelSettingsLanguage
+            // 
+            this.metroLabelSettingsLanguage.AutoSize = true;
+            this.metroLabelSettingsLanguage.Location = new System.Drawing.Point(41, 129);
+            this.metroLabelSettingsLanguage.Name = "metroLabelSettingsLanguage";
+            this.metroLabelSettingsLanguage.Size = new System.Drawing.Size(66, 19);
+            this.metroLabelSettingsLanguage.TabIndex = 3;
+            this.metroLabelSettingsLanguage.Text = "Language";
+            // 
+            // metroButtonSettingsClose
+            // 
+            this.metroButtonSettingsClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButtonSettingsClose.Highlight = true;
+            this.metroButtonSettingsClose.Location = new System.Drawing.Point(627, 349);
+            this.metroButtonSettingsClose.Name = "metroButtonSettingsClose";
+            this.metroButtonSettingsClose.Size = new System.Drawing.Size(118, 23);
+            this.metroButtonSettingsClose.TabIndex = 8;
+            this.metroButtonSettingsClose.Text = "Close Settings";
+            this.metroButtonSettingsClose.Click += new System.EventHandler(this.metroButtonSettingsClose_Click);
+            // 
+            // metroComboBoxSettingsStyle
+            // 
+            this.metroComboBoxSettingsStyle.FormattingEnabled = true;
+            this.metroComboBoxSettingsStyle.ItemHeight = 23;
+            this.metroComboBoxSettingsStyle.Location = new System.Drawing.Point(41, 83);
+            this.metroComboBoxSettingsStyle.MaxDropDownItems = 50;
+            this.metroComboBoxSettingsStyle.Name = "metroComboBoxSettingsStyle";
+            this.metroComboBoxSettingsStyle.Size = new System.Drawing.Size(177, 29);
+            this.metroComboBoxSettingsStyle.TabIndex = 4;
+            this.metroComboBoxSettingsStyle.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxSettingsStyle_SelectedIndexChanged);
+            // 
+            // metroComboBoxSettingsLanguage
+            // 
+            this.metroComboBoxSettingsLanguage.FormattingEnabled = true;
+            this.metroComboBoxSettingsLanguage.ItemHeight = 23;
+            this.metroComboBoxSettingsLanguage.Location = new System.Drawing.Point(41, 151);
+            this.metroComboBoxSettingsLanguage.MaxDropDownItems = 50;
+            this.metroComboBoxSettingsLanguage.Name = "metroComboBoxSettingsLanguage";
+            this.metroComboBoxSettingsLanguage.Size = new System.Drawing.Size(177, 29);
+            this.metroComboBoxSettingsLanguage.TabIndex = 5;
+            this.metroComboBoxSettingsLanguage.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxSettingsLanguage_SelectedIndexChanged);
             // 
             // metroTabPageChoose
             // 
@@ -503,206 +713,45 @@
             this.metroTileConvert.UseTileImage = true;
             this.metroTileConvert.Click += new System.EventHandler(this.metroTileConvert_Click);
             // 
-            // metroTabPageSettings
-            // 
-            this.metroTabPageSettings.Controls.Add(this.tabControl1);
-            this.metroTabPageSettings.Controls.Add(this.metroLinkSettingsAuthor);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsAuthor);
-            this.metroTabPageSettings.Controls.Add(this.metroTextBoxSettingsProxyPort);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsProxyPort);
-            this.metroTabPageSettings.Controls.Add(this.metroTextBoxSettingsProxy);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsProxyServer);
-            this.metroTabPageSettings.Controls.Add(this.metroToggleSettingsProxy);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsUseProxy);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsStyle);
-            this.metroTabPageSettings.Controls.Add(this.metroLabelSettingsLanguage);
-            this.metroTabPageSettings.Controls.Add(this.metroButtonSettingsClose);
-            this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsStyle);
-            this.metroTabPageSettings.Controls.Add(this.metroComboBoxSettingsLanguage);
-            this.metroTabPageSettings.HorizontalScrollbarBarColor = true;
-            this.metroTabPageSettings.Location = new System.Drawing.Point(4, 25);
-            this.metroTabPageSettings.Name = "metroTabPageSettings";
-            this.metroTabPageSettings.Size = new System.Drawing.Size(752, 371);
-            this.metroTabPageSettings.TabIndex = 3;
-            this.metroTabPageSettings.Text = "Settings";
-            this.metroTabPageSettings.VerticalScrollbarBarColor = true;
-            // 
-            // metroLinkSettingsAuthor
-            // 
-            this.metroLinkSettingsAuthor.FontSize = MetroFramework.Drawing.MetroFontSize.Small;
-            this.metroLinkSettingsAuthor.Location = new System.Drawing.Point(42, 198);
-            this.metroLinkSettingsAuthor.Name = "metroLinkSettingsAuthor";
-            this.metroLinkSettingsAuthor.Size = new System.Drawing.Size(176, 22);
-            this.metroLinkSettingsAuthor.TabIndex = 17;
-            this.metroLinkSettingsAuthor.Text = "Author\'s name";
-            this.metroLinkSettingsAuthor.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.metroLinkSettingsAuthor.Click += new System.EventHandler(this.metroLinkSettingsAuthor_Click);
-            // 
-            // metroLabelSettingsAuthor
-            // 
-            this.metroLabelSettingsAuthor.AutoSize = true;
-            this.metroLabelSettingsAuthor.FontSize = MetroFramework.Drawing.MetroFontSize.Small;
-            this.metroLabelSettingsAuthor.Location = new System.Drawing.Point(42, 183);
-            this.metroLabelSettingsAuthor.Name = "metroLabelSettingsAuthor";
-            this.metroLabelSettingsAuthor.Size = new System.Drawing.Size(77, 15);
-            this.metroLabelSettingsAuthor.TabIndex = 16;
-            this.metroLabelSettingsAuthor.Text = "translation by:";
-            // 
-            // metroTextBoxSettingsProxyPort
-            // 
-            this.metroTextBoxSettingsProxyPort.Location = new System.Drawing.Point(96, 300);
-            this.metroTextBoxSettingsProxyPort.Name = "metroTextBoxSettingsProxyPort";
-            this.metroTextBoxSettingsProxyPort.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBoxSettingsProxyPort.TabIndex = 15;
-            this.metroTextBoxSettingsProxyPort.Text = "metroTextBox2";
-            this.metroTextBoxSettingsProxyPort.TextChanged += new System.EventHandler(this.metroTextBoxSettingsProxy_TextChanged);
-            // 
-            // metroLabelSettingsProxyPort
-            // 
-            this.metroLabelSettingsProxyPort.AutoSize = true;
-            this.metroLabelSettingsProxyPort.Location = new System.Drawing.Point(41, 304);
-            this.metroLabelSettingsProxyPort.Name = "metroLabelSettingsProxyPort";
-            this.metroLabelSettingsProxyPort.Size = new System.Drawing.Size(37, 19);
-            this.metroLabelSettingsProxyPort.TabIndex = 14;
-            this.metroLabelSettingsProxyPort.Text = "Port:";
-            // 
-            // metroTextBoxSettingsProxy
-            // 
-            this.metroTextBoxSettingsProxy.Location = new System.Drawing.Point(96, 271);
-            this.metroTextBoxSettingsProxy.Name = "metroTextBoxSettingsProxy";
-            this.metroTextBoxSettingsProxy.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBoxSettingsProxy.TabIndex = 13;
-            this.metroTextBoxSettingsProxy.Text = "metroTextBox1";
-            this.metroTextBoxSettingsProxy.TextChanged += new System.EventHandler(this.metroTextBoxSettingsProxy_TextChanged);
-            // 
-            // metroLabelSettingsProxyServer
-            // 
-            this.metroLabelSettingsProxyServer.AutoSize = true;
-            this.metroLabelSettingsProxyServer.Location = new System.Drawing.Point(41, 275);
-            this.metroLabelSettingsProxyServer.Name = "metroLabelSettingsProxyServer";
-            this.metroLabelSettingsProxyServer.Size = new System.Drawing.Size(51, 19);
-            this.metroLabelSettingsProxyServer.TabIndex = 12;
-            this.metroLabelSettingsProxyServer.Text = "Server:";
-            // 
-            // metroToggleSettingsProxy
-            // 
-            this.metroToggleSettingsProxy.AutoSize = true;
-            this.metroToggleSettingsProxy.Checked = true;
-            this.metroToggleSettingsProxy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggleSettingsProxy.DisplayStatus = false;
-            this.metroToggleSettingsProxy.Location = new System.Drawing.Point(168, 243);
-            this.metroToggleSettingsProxy.Name = "metroToggleSettingsProxy";
-            this.metroToggleSettingsProxy.Size = new System.Drawing.Size(50, 17);
-            this.metroToggleSettingsProxy.TabIndex = 11;
-            this.metroToggleSettingsProxy.Text = "An";
-            this.metroToggleSettingsProxy.CheckedChanged += new System.EventHandler(this.metroToggleSettingsProxy_CheckedChanged);
-            // 
-            // metroLabelSettingsUseProxy
-            // 
-            this.metroLabelSettingsUseProxy.AutoSize = true;
-            this.metroLabelSettingsUseProxy.Location = new System.Drawing.Point(41, 241);
-            this.metroLabelSettingsUseProxy.Name = "metroLabelSettingsUseProxy";
-            this.metroLabelSettingsUseProxy.Size = new System.Drawing.Size(67, 19);
-            this.metroLabelSettingsUseProxy.TabIndex = 10;
-            this.metroLabelSettingsUseProxy.Text = "Use Proxy";
-            // 
-            // metroLabelSettingsStyle
-            // 
-            this.metroLabelSettingsStyle.AutoSize = true;
-            this.metroLabelSettingsStyle.Location = new System.Drawing.Point(41, 61);
-            this.metroLabelSettingsStyle.Name = "metroLabelSettingsStyle";
-            this.metroLabelSettingsStyle.Size = new System.Drawing.Size(94, 19);
-            this.metroLabelSettingsStyle.TabIndex = 2;
-            this.metroLabelSettingsStyle.Text = "Theme && Style";
-            // 
-            // metroLabelSettingsLanguage
-            // 
-            this.metroLabelSettingsLanguage.AutoSize = true;
-            this.metroLabelSettingsLanguage.Location = new System.Drawing.Point(41, 129);
-            this.metroLabelSettingsLanguage.Name = "metroLabelSettingsLanguage";
-            this.metroLabelSettingsLanguage.Size = new System.Drawing.Size(66, 19);
-            this.metroLabelSettingsLanguage.TabIndex = 3;
-            this.metroLabelSettingsLanguage.Text = "Language";
-            // 
-            // richTextBoxSettingsCredits
-            // 
-            this.richTextBoxSettingsCredits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxSettingsCredits.Location = new System.Drawing.Point(6, 16);
-            this.richTextBoxSettingsCredits.Name = "richTextBoxSettingsCredits";
-            this.richTextBoxSettingsCredits.ReadOnly = true;
-            this.richTextBoxSettingsCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxSettingsCredits.Size = new System.Drawing.Size(482, 262);
-            this.richTextBoxSettingsCredits.TabIndex = 9;
-            this.richTextBoxSettingsCredits.Text = resources.GetString("richTextBoxSettingsCredits.Text");
-            // 
-            // metroButtonSettingsClose
-            // 
-            this.metroButtonSettingsClose.Highlight = true;
-            this.metroButtonSettingsClose.Location = new System.Drawing.Point(635, 345);
-            this.metroButtonSettingsClose.Name = "metroButtonSettingsClose";
-            this.metroButtonSettingsClose.Size = new System.Drawing.Size(95, 23);
-            this.metroButtonSettingsClose.TabIndex = 8;
-            this.metroButtonSettingsClose.Text = "Close Settings";
-            this.metroButtonSettingsClose.Click += new System.EventHandler(this.metroButtonSettingsClose_Click);
-            // 
-            // metroComboBoxSettingsStyle
-            // 
-            this.metroComboBoxSettingsStyle.FormattingEnabled = true;
-            this.metroComboBoxSettingsStyle.ItemHeight = 23;
-            this.metroComboBoxSettingsStyle.Location = new System.Drawing.Point(41, 83);
-            this.metroComboBoxSettingsStyle.MaxDropDownItems = 50;
-            this.metroComboBoxSettingsStyle.Name = "metroComboBoxSettingsStyle";
-            this.metroComboBoxSettingsStyle.Size = new System.Drawing.Size(177, 29);
-            this.metroComboBoxSettingsStyle.TabIndex = 4;
-            this.metroComboBoxSettingsStyle.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxSettingsStyle_SelectedIndexChanged);
-            // 
-            // metroComboBoxSettingsLanguage
-            // 
-            this.metroComboBoxSettingsLanguage.FormattingEnabled = true;
-            this.metroComboBoxSettingsLanguage.ItemHeight = 23;
-            this.metroComboBoxSettingsLanguage.Location = new System.Drawing.Point(41, 151);
-            this.metroComboBoxSettingsLanguage.MaxDropDownItems = 50;
-            this.metroComboBoxSettingsLanguage.Name = "metroComboBoxSettingsLanguage";
-            this.metroComboBoxSettingsLanguage.Size = new System.Drawing.Size(177, 29);
-            this.metroComboBoxSettingsLanguage.TabIndex = 5;
-            this.metroComboBoxSettingsLanguage.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxSettingsLanguage_SelectedIndexChanged);
-            // 
             // metroToolTipChoose
             // 
             this.metroToolTipChoose.AutomaticDelay = 250;
             this.metroToolTipChoose.Tag = "";
             // 
-            // tabControl1
+            // richTextBoxHeaderTemplate
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(247, 23);
-            this.tabControl1.Name = "tabControlSettings";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(502, 316);
-            this.tabControl1.TabIndex = 18;
-            this.tabControl1.TabStop = false;
+            this.richTextBoxHeaderTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxHeaderTemplate.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxHeaderTemplate.Location = new System.Drawing.Point(0, 6);
+            this.richTextBoxHeaderTemplate.Name = "richTextBoxHeaderTemplate";
+            this.richTextBoxHeaderTemplate.Size = new System.Drawing.Size(494, 126);
+            this.richTextBoxHeaderTemplate.TabIndex = 2;
+            this.richTextBoxHeaderTemplate.Text = "";
             // 
-            // tabPage1
+            // richTextBoxHeaderDescription
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 74);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Article header";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.richTextBoxHeaderDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxHeaderDescription.Location = new System.Drawing.Point(0, 135);
+            this.richTextBoxHeaderDescription.Name = "richTextBoxHeaderDescription";
+            this.richTextBoxHeaderDescription.ReadOnly = true;
+            this.richTextBoxHeaderDescription.Size = new System.Drawing.Size(494, 111);
+            this.richTextBoxHeaderDescription.TabIndex = 3;
+            this.richTextBoxHeaderDescription.Text = "";
+            this.richTextBoxHeaderDescription.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxHeaderDescription_LinkClicked);
             // 
-            // tabPage2
+            // metroButtonResetHeaderTemplate
             // 
-            this.tabPage2.Controls.Add(this.richTextBoxSettingsCredits);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(494, 290);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Info \'n\' Credit";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.metroButtonResetHeaderTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButtonResetHeaderTemplate.Highlight = true;
+            this.metroButtonResetHeaderTemplate.Location = new System.Drawing.Point(332, 252);
+            this.metroButtonResetHeaderTemplate.Name = "metroButtonResetHeaderTemplate";
+            this.metroButtonResetHeaderTemplate.Size = new System.Drawing.Size(162, 23);
+            this.metroButtonResetHeaderTemplate.TabIndex = 19;
+            this.metroButtonResetHeaderTemplate.Text = "Rest Template";
+            this.metroButtonResetHeaderTemplate.Click += new System.EventHandler(this.metroButtonResetHeaderTemplate_Click);
             // 
             // Form1
             // 
@@ -715,11 +764,17 @@
             this.Name = "Form1";
             this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.Flat;
             this.Text = "Wordpress2Doc";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.metroTabControlContainer.ResumeLayout(false);
             this.metroTabPageLoad.ResumeLayout(false);
             this.metroTabPageLoad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadArrow)).EndInit();
+            this.metroTabPageSettings.ResumeLayout(false);
+            this.metroTabPageSettings.PerformLayout();
+            this.metroTabControlSettings.ResumeLayout(false);
+            this.metroTabPageSettingsHeader.ResumeLayout(false);
+            this.metroTabPageSettingsCredits.ResumeLayout(false);
             this.metroTabPageChoose.ResumeLayout(false);
             this.metroTabPageChoose.PerformLayout();
             this.metroTabControlPreview.ResumeLayout(false);
@@ -730,10 +785,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticles)).EndInit();
             this.metroTabPageExport.ResumeLayout(false);
             this.metroTabPageExport.PerformLayout();
-            this.metroTabPageSettings.ResumeLayout(false);
-            this.metroTabPageSettings.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -790,9 +841,12 @@
         private MetroFramework.Controls.MetroLabel metroLabelSettingsAuthor;
         private MetroFramework.Controls.MetroToggle metroToggleConvertAIO;
         private MetroFramework.Controls.MetroLabel metroLabelConvertAIO;
-        private MetroFramework.Controls.MetroTabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private MetroFramework.Controls.MetroTabControl metroTabControlSettings;
+        private MetroFramework.Controls.MetroTabPage metroTabPageSettingsHeader;
+        private MetroFramework.Controls.MetroTabPage metroTabPageSettingsCredits;
+        private System.Windows.Forms.RichTextBox richTextBoxHeaderDescription;
+        private System.Windows.Forms.RichTextBox richTextBoxHeaderTemplate;
+        private MetroFramework.Controls.MetroButton metroButtonResetHeaderTemplate;
     }
 }
 
