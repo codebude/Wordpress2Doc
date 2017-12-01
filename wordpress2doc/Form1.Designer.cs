@@ -127,9 +127,9 @@
             // 
             this.progressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarStatus.Location = new System.Drawing.Point(40, -41);
+            this.progressBarStatus.Location = new System.Drawing.Point(40, 259);
             this.progressBarStatus.Name = "progressBarStatus";
-            this.progressBarStatus.Size = new System.Drawing.Size(104, 35);
+            this.progressBarStatus.Size = new System.Drawing.Size(664, 35);
             this.progressBarStatus.TabIndex = 4;
             this.progressBarStatus.Visible = false;
             // 
@@ -696,7 +696,7 @@
             this.metroLabelConvertStatus.FontSize = MetroFramework.Drawing.MetroFontSize.Large;
             this.metroLabelConvertStatus.Location = new System.Drawing.Point(61, 297);
             this.metroLabelConvertStatus.Name = "metroLabelConvertStatus";
-            this.metroLabelConvertStatus.Size = new System.Drawing.Size(57, 25);
+            this.metroLabelConvertStatus.Size = new System.Drawing.Size(617, 25);
             this.metroLabelConvertStatus.TabIndex = 6;
             this.metroLabelConvertStatus.Text = "Show the current status";
             this.metroLabelConvertStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
