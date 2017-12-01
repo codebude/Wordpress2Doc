@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="hu" language-long="Hungarian" application="Wordpress2Doc" author="Adam Szucs" author-link="https://wordpress.video.hu" lastedit-ts="636474981339260307" lastedit="Dienstag, 28. November 2017 20:35:33" />
+  <info language="hu" language-long="Hungarian" application="Wordpress2Doc" author="Adam Szucs" author-link="https://wordpress.video.hu" lastedit-ts="636477113834349090" lastedit="Freitag, 1. Dezember 2017 07:49:43" />
   <ressources>
     <ressource label="C_ttPreviewTip">Egy soron duplán kattintva meg lehet nézni cikk előnézetét.</ressource>
     <ressource label="C_lblConvertStatus"> tartalom / </ressource>
@@ -47,5 +47,19 @@ a konvertálást!</ressource>
     <ressource label="C_lblSettingsTranslated">fordította:</ressource>
     <ressource label="C_dlgErrorHelp">A súgófájlt nem lehet megnyitni. Hiba történt:</ressource>
     <ressource label="C_lblConvertAIO">Minden fájl egyetlen fájlban:</ressource>
+    <ressource label="C_txtUnpublished">kiadatlan</ressource>
+    <ressource label="C_tpSettingsHeader">Header</ressource>
+    <ressource label="C_btnResetHeaderTemplate">Sablon visszaállítása</ressource>
+    <ressource label="C_txtHeaderDescription">Használja a fenti sablont a cikkek fejlécének személyre szabásához. A formázáshoz HTML és CSS használható.
+Használja a következő helyőrzőket a cikk kimeneti elemeihez.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+Tippek:
+- Ha nincs szükség fejlécre, teljesen törölje a sablont.
+- A {{date}} helyettesítő kártya dátumkijelzését a következő karakterekkel formázhatja: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="fa" language-long="Persian (Farsi) - فارسی" application="Wordpress2Doc" author="سجاد پناهی – Sajjad Panahi" author-link="http://www.AsreElm.com" lastedit-ts="635538316157702156" lastedit="Mittwoch, 10. Dezember 2014 18:06:55" />
+  <info language="fa" language-long="Persian (Farsi) - فارسی" application="Wordpress2Doc" author="سجاد پناهی – Sajjad Panahi" author-link="http://www.AsreElm.com" lastedit-ts="636477111645866088" lastedit="Freitag, 1. Dezember 2017 07:46:04" />
   <ressources>
     <ressource label="C_ttPreviewTip">بر روی یک ردیف دوبار کلیک کنید تا پیش نمایش مطلب نمایش داده شود.</ressource>
     <ressource label="C_lblConvertStatus">مجموع مقاله</ressource>
@@ -44,5 +44,19 @@
     <ressource label="C_lblSettingsTranslated">ترجمه شده توسط:</ressource>
     <ressource label="C_dlgErrorHelp">فایل راهنما نمی تواند باز شود. اتفاق افتاده است یک خطا وجود دارد:</ressource>
     <ressource label="C_lblConvertAIO">همه مقالات در یک فایل:</ressource>
+    <ressource label="C_txtUnpublished">منتشر نشده</ressource>
+    <ressource label="C_tpSettingsHeader">هدر</ressource>
+    <ressource label="C_btnResetHeaderTemplate">تنظیم مجدد الگو</ressource>
+    <ressource label="C_txtHeaderDescription">از الگوی فوق استفاده کنید تا سرصفحه مقالات را سفارشی کنید. برای قالب بندی شما می توانید از HTML و CSS استفاده کنید.
+از متغیرهایی زیر برای خروجی عناصر مقاله استفاده کنید.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+نکات:
+- اگر هدر موردی نباشد، قالب را به طور کامل حذف کنید.
+- شما می توانید خروجی تاریخ {{date}} وارث با شخصیت های زیر را قالب بندی کنید: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

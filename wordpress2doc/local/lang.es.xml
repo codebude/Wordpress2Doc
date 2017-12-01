@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="es" language-long="Spanish" application="Wordpress2Doc" author="Hugo Sanchez" author-link="" lastedit-ts="636225799737107506" lastedit="Montag, 13. Februar 2017 10:52:53" />
+  <info language="es" language-long="Spanish" application="Wordpress2Doc" author="Hugo Sanchez" author-link="" lastedit-ts="636477110503907742" lastedit="Freitag, 1. Dezember 2017 07:44:10" />
   <ressources>
     <ressource label="C_ttPreviewTip">Haz doble clic en una fila para previsualizar el post</ressource>
     <ressource label="C_lblConvertStatus"> artículos totales / </ressource>
@@ -48,5 +48,19 @@ el proceso de conversion.</ressource>
     <ressource label="C_lblSettingsTranslated">traducido por:</ressource>
     <ressource label="C_dlgErrorHelp">No se pudo abrir el archivo de ayuda. Ocurrió un error:</ressource>
     <ressource label="C_lblConvertAIO">Todos los artículos en un archivo:</ressource>
+    <ressource label="C_txtUnpublished">Inédito</ressource>
+    <ressource label="C_tpSettingsHeader">Encabezamiento</ressource>
+    <ressource label="C_btnResetHeaderTemplate">Restablecer plantilla</ressource>
+    <ressource label="C_txtHeaderDescription">Use la plantilla de arriba para personalizar el encabezado de los artículos. Para formatear puede usar HTML y CSS.
+Use los siguientes marcadores de posición para dar salida a los elementos del artículo.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+Consejos:
+- Si no se desea encabezado, elimine la plantilla por completo.
+- Puede formatear el resultado de la fecha del comodín {{date}} con los siguientes caracteres: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

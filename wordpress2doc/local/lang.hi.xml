@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="hi" language-long="Hindi" application="Wordpress2Doc" author="Debashish" author-link="http://debashish.com" lastedit-ts="635538320910843439" lastedit="Wednesday, 16. June 2016 18:14:51" />
+  <info language="hi" language-long="Hindi" application="Wordpress2Doc" author="Debashish" author-link="http://debashish.com" lastedit-ts="636477112965962423" lastedit="Freitag, 1. Dezember 2017 07:48:16" />
   <ressources>
     <ressource label="C_ttPreviewTip">ब्लॉग पोस्ट का पूर्वावलोकन करने हेतु पंक्ति पर डबलक्लिक करें</ressource>
     <ressource label="C_lblConvertStatus">समग्र लेख / </ressource>
@@ -45,5 +45,19 @@
     <ressource label="C_lblSettingsTranslated">अनुवादक:</ressource>
     <ressource label="C_dlgErrorHelp">मदद फ़ाइल खोली नहीं जा सकी। त्रुटि:</ressource>
     <ressource label="C_lblConvertAIO">एक फ़ाइल में सभी लेख:</ressource>
+    <ressource label="C_txtUnpublished">अप्रकाशित</ressource>
+    <ressource label="C_tpSettingsHeader">हैडर</ressource>
+    <ressource label="C_btnResetHeaderTemplate">टेम्पलेट रीसेट करें</ressource>
+    <ressource label="C_txtHeaderDescription">लेख के शीर्ष लेख को अनुकूलित करने के लिए उपरोक्त टेम्पलेट का उपयोग करें। फ़ॉर्मेट करने के लिए आप HTML और CSS का उपयोग कर सकते हैं।
+आलेख के आउटपुट तत्वों के लिए निम्नलिखित प्लेसहोल्डर का उपयोग करें।
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+सुझाव:
+- यदि कोई शीर्षक इच्छित नहीं है, तो टेम्पलेट पूरी तरह से हटाएं।
+- आप {{date}} वाइल्डकार्ड के दिनांक आउटपुट को निम्न वर्णों के साथ प्रारूपित कर सकते हैं: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

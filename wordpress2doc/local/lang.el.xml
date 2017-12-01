@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="el" language-long="Greek" application="Wordpress2Doc" author="Phovos Tromou" author-link="http://phovos.net" lastedit-ts="636022299606280066" lastedit="Mittwoch, 22. Juni 2016 22:06:00" />
+  <info language="el" language-long="Greek" application="Wordpress2Doc" author="Phovos Tromou" author-link="http://phovos.net" lastedit-ts="636477108837097640" lastedit="Freitag, 1. Dezember 2017 07:41:23" />
   <ressources>
     <ressource label="C_ttPreviewTip">Κάνετε διπλό κλικ σε ένα σειρά για να δείτε το άρθρο</ressource>
     <ressource label="C_lblConvertStatus">'αρθρα σύνολο /</ressource>
@@ -44,5 +44,19 @@
     <ressource label="C_lblSettingsTranslated">Aρχικό κείμενο:</ressource>
     <ressource label="C_dlgErrorHelp">Δεν θα μπορούσε να ανοίξει το αρχείο βοήθειας. Τους συνέβη κατά λάθος:</ressource>
     <ressource label="C_lblConvertAIO">Όλα τα άρθρα σε ένα αρχείο:</ressource>
+    <ressource label="C_txtUnpublished">Δεν έχει δημοσιευθεί</ressource>
+    <ressource label="C_tpSettingsHeader">επικεφαλίδα</ressource>
+    <ressource label="C_btnResetHeaderTemplate">Επαναφορά πρότυπου</ressource>
+    <ressource label="C_txtHeaderDescription">Χρησιμοποιήστε το παραπάνω πρότυπο για να προσαρμόσετε την κεφαλίδα των άρθρων. Για τη μορφοποίηση μπορείτε να χρησιμοποιήσετε HTML και CSS.
+Χρησιμοποιήστε τα ακόλουθα σύμβολα κράτησης θέσης για να εξάγετε στοιχεία του άρθρου.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+Συμβουλές:
+- Εάν δεν θέλετε επικεφαλίδα, διαγράψτε πλήρως το πρότυπο.
+- Μπορείτε να διαμορφώσετε την έξοδο ημερομηνίας του {{date}} μπαλαντέρ με τους ακόλουθους χαρακτήρες:  https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

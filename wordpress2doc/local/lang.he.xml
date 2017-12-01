@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="he" language-long="Hebrew" application="Wordpress2Doc" author="Yakov Itai Samelson" author-link="http://www.webmarketing4biz.com/" lastedit-ts="635538315920835555" lastedit="Mittwoch, 10. Dezember 2014 18:06:32" />
+  <info language="he" language-long="Hebrew" application="Wordpress2Doc" author="Yakov Itai Samelson" author-link="http://www.webmarketing4biz.com/" lastedit-ts="636477112314398155" lastedit="Freitag, 1. Dezember 2017 07:47:11" />
   <ressources>
     <ressource label="C_ttPreviewTip">לחצו לחיצה כפולה על שורה על מנת לצפות בבלוג פוסט</ressource>
     <ressource label="C_lblConvertStatus">מאמרים בסה"כ </ressource>
@@ -44,5 +44,19 @@
     <ressource label="C_lblSettingsTranslated">תורגם על ידי</ressource>
     <ressource label="C_dlgErrorHelp">קובץ העזרה לא היה אפשרות לפתוח.שגיאה קרו</ressource>
     <ressource label="C_lblConvertAIO">כל המאמרים בקובץ אחד:</ressource>
+    <ressource label="C_txtUnpublished">שלא פורסם</ressource>
+    <ressource label="C_tpSettingsHeader">כותרת</ressource>
+    <ressource label="C_btnResetHeaderTemplate">אפס את התבנית</ressource>
+    <ressource label="C_txtHeaderDescription">השתמש בתבנית למעלה כדי להתאים אישית את הכותרת של הכתבות. עבור עיצוב אתה יכול להשתמש ב- HTML ו- CSS.
+השתמש במצייני המקום הבאים לפלט אלמנטים של המאמר.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+טיפים:
+- אם אין כותרת רצוי, מחק את התבנית לחלוטין.
+- ניתן לאתחל את תאריך הפלט של התו הכללי {{date}} עם התווים הבאים: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>
