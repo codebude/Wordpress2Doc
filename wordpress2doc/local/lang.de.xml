@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <translation>
-  <info language="de" language-long="German" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://code-bude.net" lastedit-ts="636477077593115026" lastedit="Freitag, 1. Dezember 2017 06:49:19" />
+  <info language="de" language-long="German" application="Wordpress2Doc" author="Raffael Herrmann" author-link="http://code-bude.net" lastedit-ts="636477096169523755" lastedit="Freitag, 1. Dezember 2017 07:20:16" />
   <ressources>
     <ressource label="C_ttPreviewTip">Doppelklicken Sie auf eine Zeile, um eine Vorschau des Artikel angezeigt zu bekommen</ressource>
     <ressource label="C_lblConvertStatus"> Artikel insgesamt / </ressource>
@@ -50,5 +50,18 @@ Umwandlungsprozess zu beginnen.</ressource>
 </ressource>
     <ressource label="C_lblConvertAIO">Alle Artikel in einer Datei:</ressource>
     <ressource label="C_txtUnpublished">Nicht veröffentlicht</ressource>
+    <ressource label="C_tpSettingsHeader">Kopfzeile</ressource>
+    <ressource label="C_btnResetHeaderTemplate">Template zurücksetzen</ressource>
+    <ressource label="C_txtHeaderDescription">Nutzen Sie das oben stehende Template um die Kopfzeile der Artikel anzupassen. Zur Formatierung können Sie HTML und CSS nutzen.
+Verwenden Sie die folgenden Platzhalter, um Elemente des Artikels auszugeben.
+
+{{title}}
+{{date:ddd, dd MMM yyyy HH:mm:ss}}
+{{creator}}
+{{categories}}
+
+Tipps:
+- Wenn keine Kopfzeile gewünscht ist, löschen Sie das Template komplett.
+- Die Datumsausgabe des {{date}}-Platzhalters können Sie mit folgenden Zeichen formatieren: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</ressource>
   </ressources>
 </translation>

@@ -143,6 +143,9 @@ namespace Wordpress2Doc
         public string C_dlgErrorHelp { get { return GetText("C_dlgErrorHelp"); } }
         public string C_lblConvertAIO { get { return GetText("C_lblConvertAIO"); } }
         public string C_txtUnpublished { get { return GetText("C_txtUnpublished"); } }
+        public string C_tpSettingsHeader { get { return GetText("C_tpSettingsHeader"); } }
+        public string C_btnResetHeaderTemplate { get { return GetText("C_btnResetHeaderTemplate"); } }
+        public string C_txtHeaderDescription { get { return GetText("C_txtHeaderDescription"); } }
 
         public struct TranslationInfo
         {

@@ -20,6 +20,7 @@ using System.Reflection;
 using System.Net;
 using TuesPechkin;
 using System.Drawing.Printing;
+using System.Diagnostics;
 
 namespace Wordpress2Doc
 {
@@ -28,6 +29,7 @@ namespace Wordpress2Doc
         private PrivateFontCollection fontColl;
         private Font handwrittenFont;
         private Localization loc;
+        private const string basicHeaderTemplate = "<h1>{{title}}</h1><i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i><br/><br/>";
         private int version = 4;
 
         public Form1()
@@ -91,7 +93,13 @@ namespace Wordpress2Doc
             }
             metroToggleSettingsProxy.Checked = Convert.ToBoolean(SettingsHelper.GetAppSetting("proxy-use"));
             metroTextBoxSettingsProxyPort.Text = SettingsHelper.GetAppSetting("proxy-port");
-            metroTextBoxSettingsProxy.Text = SettingsHelper.GetAppSetting("proxy-server");            
+            metroTextBoxSettingsProxy.Text = SettingsHelper.GetAppSetting("proxy-server");
+
+            if (SettingsHelper.GetAppSetting("headerTemplate") == null)
+            {
+                SettingsHelper.SetAppSetting("headerTemplate", basicHeaderTemplate);
+            }
+            richTextBoxHeaderTemplate.Text = SettingsHelper.GetAppSetting("headerTemplate");
         }
 
         private void UpdateLanguage()
@@ -123,7 +131,10 @@ namespace Wordpress2Doc
             metroLabelSettingsStyle.Text = loc.C_lblSettingsStyle;
             metroLabelSettingsLanguage.Text = loc.C_lblSettingsLanguage;
             metroButtonSettingsClose.Text = loc.C_btnSettingsClose;
-            metroLabelSettingsCredits.Text = loc.C_lblSettingsCredits + " (Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + ")";
+            metroTabPageSettingsCredits.Text = loc.C_lblSettingsCredits + " (Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + ")";
+            metroTabPageSettingsHeader.Text = loc.C_tpSettingsHeader;
+            richTextBoxHeaderDescription.Text = loc.C_txtHeaderDescription;
+            metroButtonResetHeaderTemplate.Text = loc.C_btnResetHeaderTemplate;
             metroLabelSettingsProxyPort.Text = loc.C_lblProxyPort;
             metroLabelSettingsProxyServer.Text = loc.C_lblProxyServer;
             metroLabelSettingsUseProxy.Text = loc.C_lblUseProxy;
@@ -516,6 +527,7 @@ namespace Wordpress2Doc
 
         private void metroButtonSettingsClose_Click(object sender, EventArgs e)
         {
+            SettingsHelper.SetAppSetting("headerTemplate", richTextBoxHeaderTemplate.Text);
             metroTabControlContainer.TabPages.Clear();
             metroTabControlContainer.TabPages.AddRange(new TabPage[]{metroTabPageLoad, metroTabPageChoose, metroTabPageExport });
         }
@@ -647,7 +659,7 @@ namespace Wordpress2Doc
                     }
 
                     //Create metadata html
-                    var headerLineTemplate = "<h1>{{title}}</h1><i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i><br/><br/>";
+                    var headerLineTemplate = SettingsHelper.GetAppSetting("headerTemplate");
 
                     var dtFormat = Regex.Match(headerLineTemplate, "{{date:(?<dtformat>[^}]*?)}}").Groups["dtformat"];
                     var catStr = string.Join(", ", categories.Select(x => $"{x.Domain}: {x.NiceName}"));
@@ -790,6 +802,20 @@ namespace Wordpress2Doc
             public string NiceName { get; set; }
             public string Domain { get; set; }
         }
-        
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SettingsHelper.SetAppSetting("headerTemplate", richTextBoxHeaderTemplate.Text);
+        }
+
+        private void metroButtonResetHeaderTemplate_Click(object sender, EventArgs e)
+        {
+            richTextBoxHeaderTemplate.Text = basicHeaderTemplate;
+        }
+
+        private void richTextBoxHeaderDescription_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
+        }
     }
 }
