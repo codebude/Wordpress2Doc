@@ -30,7 +30,7 @@ namespace Wordpress2Doc
         private Font handwrittenFont;
         private Localization loc;
         private const string basicHeaderTemplate = "<h1>{{title}}</h1><i>{{date:ddd, dd MMM yyyy HH:mm:ss}}, {{creator}}, [{{categories}}]</i><br/><br/>";
-        private int version = 4;
+        private int version = 5;
 
         public Form1()
         {
