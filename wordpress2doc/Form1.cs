@@ -435,7 +435,7 @@ namespace Wordpress2Doc
                 }
             };
 
-            IConverter converter = new StandardConverter(new PdfToolset(new WinAnyCPUEmbeddedDeployment(new TempFolderDeployment())));
+            IConverter converter = new StandardConverter(new PdfToolset(new StaticDeployment(Application.StartupPath)));
             byte[] pdfBuf = converter.Convert(document);
             
             FileStream fs = new FileStream(fName, FileMode.Create, FileAccess.ReadWrite);
