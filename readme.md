@@ -27,8 +27,11 @@ in 08/2013.
 Michael Bielski -> Information about .docx-processing
 http://www.codeproject.com/Articles/91894/HTML-as-a-Source-for-a-DOCX-File
 
-gmanny -> Pechkin (.NET Wrapper for WkHtmlToPdf)
+gmanny -> Pechkin (.NET Wrapper for WkHtmlToPdf - used before)
 https://github.com/gmanny/Pechkin
+
+tuespetre -> TuesPechkin (.NET Wrapper for WkHtmlToX)
+https://github.com/tuespetre/TuesPechkin
 
 Andre Loker -> How to load fonts in memory
 http://blog.andreloker.de/post/2008/07/03/Load-a-font-from-disk-stream-or-byte-array.aspx
